@@ -1,0 +1,47 @@
+//
+// VARIABLES - GLOBAL & BOOTSTRAP
+//
+////////////////////////////
+
+@import 'variables';
+@import 'bootstrap-vars';
+
+
+//
+// MIXINS
+//
+////////////////////////////
+
+@import 'mixins';
+
+
+//
+// Functions
+//
+////////////////////////////
+
+@import 'functions';
+
+//
+// VENDOR -> BOOTSTRAP ( node_modules )
+//
+////////////////////////////
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+@import "../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../../../../node_modules/bootstrap/scss/mixins/grid";
+
+
+//
+// COMPONENTS (Should be included in style.scss => style.css
+//
+////////////////////////////
+
+// @import 'components/primary-header';
+// @import 'components/primary-footer';
+
+// Print
+@import 'print';

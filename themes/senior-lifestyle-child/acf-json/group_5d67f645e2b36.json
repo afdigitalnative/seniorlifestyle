@@ -1,0 +1,176 @@
+{
+    "key": "group_5d67f645e2b36",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_5d67f65901384",
+            "label": "404 Page Title",
+            "name": "404_page_title",
+            "type": "text",
+            "instructions": "Header text displayed on the 404 page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Oops! That page can’t be found.",
+            "placeholder": "404 Page Title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d680c94b7a62",
+            "label": "Search - No Results Title",
+            "name": "search_no_results_title",
+            "type": "text",
+            "instructions": "Text displayed when no results are returned.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your search returned no results...",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d68103fea6ec",
+            "label": "Search - No Results Message",
+            "name": "search_no_results_msg",
+            "type": "textarea",
+            "instructions": "Short paragraph for the search page (no results found)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your search returned no results...",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5d6816526e7ff",
+            "label": "Footer Copyright",
+            "name": "footer_copyright_txt",
+            "type": "text",
+            "instructions": "Add footer copyright text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "&copy; Senior Lifestyle | 303 East Wacker Drive, <br>24th Floor, Chicago, IL 60601",
+            "placeholder": "footer copyright text",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d76affad7465",
+            "label": "Tracking Code",
+            "name": "tracking_code",
+            "type": "textarea",
+            "instructions": "Additional tracking code that will be added just before the closing <\/body> tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d7ad4decf30d",
+            "label": "Google Maps API Key",
+            "name": "google_maps_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d7ad506cf30f",
+            "label": "Google Geocoding API Key",
+            "name": "google_geocoding_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fa08c048419d",
+            "label": "Yardi Community DNI",
+            "name": "dni_enable",
+            "type": "true_false",
+            "instructions": "If checked it will enable the Yardi DNI implementation for community pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enable",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "sl-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1604357702
+}

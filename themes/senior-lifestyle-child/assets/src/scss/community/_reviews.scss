@@ -1,0 +1,70 @@
+
+section.reviews-section {
+    background-color: $sl-dark-blue;
+    padding: 3rem 0;
+
+    .reviews-hdr-wrapper {
+        text-align: center;
+
+        h2 {
+            color: #fff;
+            margin: 0.25rem 0 2rem;
+        }
+    }
+
+    .overall-rating-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1.5rem;
+
+        .overall-rating-wrapper {
+            .yasr-overall-rating {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto 1rem;
+            }
+
+            p {
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+
+    .visitor-vote-container {
+        display: flex;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    .yasr-rater-stars-visitor-votes {
+        display: block;
+        margin: 0 auto 0.5rem;
+
+    }
+
+    .dashicons-chart-bar {
+        display: none;
+    }
+
+    .yasr-visitor-votes-after-stars-class {
+        color: #fff;
+        text-align: center;
+    }
+}
+
+//for sheridan
+body.sheridan section.reviews-section {
+    background-color: $sh-tertiary;
+}
+
+//for signature
+body.signature section.reviews-section {
+    background-color: $si-tertiary;
+}

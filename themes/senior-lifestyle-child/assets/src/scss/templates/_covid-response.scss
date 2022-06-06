@@ -1,0 +1,84 @@
+.covid-testimonial {
+    background-color: $sl-primary !important;
+    background-image: url(../../img/pattern/patt_7_navy.svg)!important;
+    background-repeat: repeat!important;
+    background-size: 30px auto!important;
+    margin: auto;
+    padding: 40px 0;
+
+    h2{
+        color: white !important;
+    }
+
+    .testimonials-body{
+        p, h4{
+            text-align: center;
+        }
+    }
+
+    #testimonials{
+        background-color: white;
+        padding: 80px 120px;
+        border-radius: 25px;
+        img{
+            margin: 0 auto !important;
+        }
+    }
+
+    .testimonials-row-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slick-prev:before{
+        content: "<" !important;
+    }
+
+    .slick-next:before{
+        content: ">" !important;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        color: $sl-primary !important;
+        font-size: 44px !important;
+    }
+    .slick-prev, .slick-next{
+        width: 44px !important;
+    }
+    .slick-next{
+        right: 45px !important;
+        @include media-breakpoint-down(sm){
+            right: 0px !important;
+        }
+    }
+    .slick-prev{
+        left: 45px !important;
+        @include media-breakpoint-down(sm){
+            left: 0px !important;
+        }
+    }
+
+    .make-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .covid-testimonial #testimonials {
+        padding: 30px 40px !important;
+    }
+
+    .make-row{
+        flex-direction: column !important;
+    }
+    .horizontal-card{
+        margin: 12px !important;
+    }
+
+
+}

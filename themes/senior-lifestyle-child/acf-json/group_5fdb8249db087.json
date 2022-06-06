@@ -1,0 +1,62 @@
+{
+    "key": "group_5fdb8249db087",
+    "title": "Shortcodes",
+    "fields": [
+        {
+            "key": "field_5fdb825386a9c",
+            "label": "Custom Shortcodes",
+            "name": "custom_shortcodes",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5fdb827786a9d",
+                    "label": "Testimonials",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "[testimonials section=\"front-page\" icon=\"true\" ratings=\"true\"]\r\n\r\nAccepted attributes:\r\n\r\nNo attributes\r\nIf you add no attributes it will default to section section=\"front-page\" icon=\"true\" ratings=\"true\"\r\n\r\nsection (string)\r\nAdd the slug to any section that you want to filter testimonials by. You can add multiple sections by separating them with a comma.\r\nDefault: front-page\r\n\r\nicon (boolean)\r\nWhether to show our hide the quote icon.\r\nDefault: true\r\n\r\nratings (boolean)\r\nDisplay ratings from each testimonials.\r\nDefault: true",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+<<<<<<< HEAD
+    "modified": 1608221664
+=======
+    "modified": 1608221853
+>>>>>>> 6063d5e5786f99ccd7c7aba48b148a2c2af33a4f
+}

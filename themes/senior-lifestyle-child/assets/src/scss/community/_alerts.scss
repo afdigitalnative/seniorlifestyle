@@ -1,0 +1,64 @@
+
+
+.alerts-section {
+    padding: 3rem 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 32px 0 30px 0;
+        }
+
+
+    .alert-block {
+        background-color: $sl-extra-light-gray;
+        border-radius: 3px;
+        padding: 2.5rem 3rem;
+        margin-bottom: 1.75rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 1.5rem;
+        }
+
+        .alert-icon {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 0.75rem;
+
+            .high-alert {
+                color: $sl-red;
+            }
+        }
+
+        .alert-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .alert-btn-wrapper {
+            margin-top: 2rem;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+
+
+            .btn-primary {
+                background-color: $sl-red;
+                border-color: $sl-red;
+
+                min-width: 250px;
+
+                &:hover {
+                    border-color: darken($sl-red, 15%);
+                    background-color: darken($sl-red, 15%);
+                }
+            }
+        }
+    }
+
+}

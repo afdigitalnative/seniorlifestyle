@@ -1,0 +1,71 @@
+.pagination-wrap {
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 70px;
+
+@include media-breakpoint-down(sm) {
+    margin: 20px auto;
+    padding: 40px 0 20px 0;
+}
+
+    ul.page-numbers {
+        padding-inline-start: unset;
+        list-style: none;
+        margin: 0 auto;
+        margin-bottom: -0.3125rem;
+    }
+
+    .page-numbers:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    ul.page-numbers li {
+        display: inline-block;
+        text-align: center;
+		margin-bottom: 0;
+    }
+
+    .page-numbers a, .page-numbers span {
+        display: block;
+        padding: 4px;
+        min-height: 34px;
+        min-width: 33px;
+        line-height: 24px;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+        border: 1px solid $primary-light;
+		border-radius: 4px;
+        color: $primary;
+    }
+
+    .page-numbers a span {
+        padding: 0
+    }
+	.page-numbers a.next,
+	.page-numbers a.prev {
+		border: none;
+		
+		&:hover {
+			background: none;
+			color: $primary;
+		}
+	}
+    .page-numbers a:hover, .page-numbers.current, .page-numbers.current:hover {
+        color: $sl-white;
+        background: $primary;
+        text-decoration: none;
+		border-color: $primary;
+    }
+
+    .page-numbers:hover {
+        text-decoration: none
+    }
+}

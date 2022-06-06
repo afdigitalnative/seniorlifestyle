@@ -1,0 +1,135 @@
+.in-page-nav-bar {
+	position: relative;
+	z-index: 10;
+	
+	&.sticky {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 10000;
+	}
+	@include media-breakpoint-up(md) {
+		background-color: $primary-dark;
+	}
+	ul {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.in-page-nav-toggle {
+		position: relative;
+		background-color: $primary;
+		padding: 8px 0;
+		color: #FFF;
+		
+		> div:first-of-type {
+			font-size: 16px;
+		}
+		.active-page-link {
+			font-size: 20px;
+			line-height: 25px;
+		}
+		i {
+			position: absolute;
+			right: 16px;
+			bottom: 10px;
+		}
+	}
+	.in-page-links {
+		width: 100%;
+		/*display: block;*/
+		list-style-type: none;
+		padding: 0;
+		background-color: #FFF;
+		box-shadow: rgba(34, 34, 34, 0.1) 0px 1px 3px 2px;
+		@include media-breakpoint-up(md) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: unset;
+			background-color: transparent;
+		}
+		li {
+			margin-bottom: 0;
+			
+			@include media-breakpoint-up(sm) {
+				padding: 7px 0;
+			}
+			
+			.in-page-icon {
+				padding-bottom: 0.25rem;
+				display: none;
+				@include media-breakpoint-up(md) {
+					display: block;
+				}
+			}
+			&.active {
+				@include media-breakpoint-up(md) {
+					a {
+						background-color: $primary-light;
+						border-radius: 39.5px;
+						&:after {
+							display: block;
+						}
+						&:before {
+							display: none;
+						}
+					}
+				}
+				a:before {
+					content: "\f061";
+					color: #13102c;
+					font-family: 'Font Awesome 5 Pro';
+					font-size: 15px;
+					font-weight: 900;
+				}
+			}
+			a {
+				position: relative;
+				display: block;
+				font-weight: 500;
+				padding: 0.75rem 1.25rem;
+				text-align: left;
+				transition: background 0.2s linear;
+				color: #13102c;
+				@include media-breakpoint-up(md) {
+					color: #fff;
+					border-radius: 39.5px;
+					text-transform: capitalize;
+					border: 0 solid transparent;
+					background-color: transparent;
+					margin-bottom: 0;
+					/*padding: 25px 35px;*/
+					padding: 0.9rem 2rem;
+					text-align: center;
+					&:hover {
+						background-color: $primary-light;
+						border-radius: 39.5px;
+						&:after {
+							display: block;
+						}
+					}
+				}
+				span {
+					transition: all 0.2s linear;
+				}
+				/*
+				&:after {
+					content: "\f0d8";
+					position: absolute;
+					bottom: -6px;
+					left: 0;
+					right: 0;
+					margin: auto;
+					font-family: 'Font Awesome 5 Pro';
+					font-size: 30px;
+					font-weight: 900;
+					color: #fff;
+					display: none;
+				}
+				*/
+			}
+		}
+	} // .in-page-links
+} // .in-page-nav-bar	

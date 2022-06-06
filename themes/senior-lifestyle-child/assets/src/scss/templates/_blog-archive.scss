@@ -1,0 +1,80 @@
+// blog archive.
+// aim of this file is to deal with the archive page structure
+
+main.site-main {
+	.section-title-with-line {
+		margin-left: -20px;
+		
+		@include media-breakpoint-down(sm) {
+			margin-left: 0px;
+			margin-bottom: 25px;
+		}
+		h1 {
+			&:before, &:after {
+				background-color: $primary-light;
+			}	
+		}
+	}
+
+    .pagination-wrap {
+        @include media-breakpoint-down(sm) {
+            border-top: 0px;
+            margin-top: 0.625rem;
+            margin-bottom: 1.875rem;
+        }
+
+    }
+
+    .entry-container {
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 0;
+        }
+
+        .post-date p {
+            font-style: normal;
+        }
+
+        .post-date a {
+            font-weight: normal;
+        }
+
+    }
+
+    #blog article.post {
+		margin-bottom: 38px;
+		padding: 20px 20px 30px;
+		border-radius: 15px;
+		background: #ffffff;
+		box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.09);
+
+        @include media-breakpoint-down(sm) {
+            border-bottom: 0px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .entry-container {
+            h2 {
+                padding-bottom: 0;
+            }
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 0.625rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 0;
+
+            .alpha.entry-title {
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,131 @@
+.section-title-with-line {
+	position: relative;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	@include media-breakpoint-down(xl) {
+		padding-left: 40px;
+		margin-left: -40px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-left: 0;
+		margin-left: 0;
+	}
+	
+	h2, .h2 {
+		font-weight: bold;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			margin: auto;
+			left: 5px;
+			display: block;
+			height: 43px;
+			width: 3px;
+			transform: rotate(23deg);
+			background-color: $primary-light;
+			
+			@include media-breakpoint-down(xs) {
+				height: 35px;
+				left: 10px;
+			}
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}				
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 10px;
+			margin: auto;
+			left: 15px;
+			display: block;
+			height: 43px;
+			width: 3px;
+			transform: rotate(23deg);
+			background-color: $primary-light;
+			
+			@include media-breakpoint-down(xs) {
+				height: 35px;
+				left: 18px;
+			}
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}				
+		}	
+	}
+	
+	.line-top {
+		position: relative;
+		width: auto;
+		flex-grow: 1;
+		margin-left: 20px;			
+		display: block;
+		height: 3px;
+		background-color: $primary-light;
+		z-index: -1;
+		
+		&:before {
+			position: absolute;
+			content: "";
+			width: 3px;
+			background-color: $primary-light;					
+		}			
+		@include media-breakpoint-down(md) {
+			&:not(.m-show) {
+				display: none !important;
+			}
+		}
+	}
+
+	&.line-primary-light {
+		h2, .h2 {
+			&:before, &:after {
+				background-color: $primary-light;
+			}
+		}
+	}
+	
+	&.line-primary-yellow {
+		h2, .h2 {
+			&:before, &:after {
+				background-color: $primary-yellow;
+			}
+		}
+	}	
+
+	&.line-white {
+		h2, .h2 {
+			&:before, &:after {
+				background-color: #fff;
+			}
+		}
+	}
+	
+	&.m-show {
+		@include media-breakpoint-down(sm) {
+			padding-left: 30px;
+			margin-bottom: 10px;
+		}
+		
+		h2, .h2 {
+			@include media-breakpoint-down(sm) {
+				&:before {
+					display: block;
+					height: 30px;
+					left: 8px;
+					top: 8px;
+				}
+				&:after {
+					display: block;
+					height: 30px;
+					left: 16px;
+					top: 8px;
+				}					
+			}
+		}
+	}
+}

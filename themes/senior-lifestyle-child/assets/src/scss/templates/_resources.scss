@@ -1,0 +1,182 @@
+h1{
+    font-weight: bold;
+    color:#fff;
+    font-size: 56px;
+}
+
+.lifestyle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // margin: 56px 0;
+
+    h2{
+        font-size: 42px;
+        margin-bottom: 42px;
+    }
+
+    .row{
+        justify-content: space-between !important;
+        width: 100%;
+        margin: 0 !important;
+        .guide-card{
+            max-width: 380px;
+            box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.09);
+            padding:56px;
+            text-align: left;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .guide-title{
+                text-align: center !important;
+                font-size: 28px !important;
+                margin-bottom: 26px;
+            }
+            .guide-link{
+                text-decoration: underline;
+            }
+            .guide-image{
+                border-radius: 20px;
+                border-left: 8px solid $sl-primary;
+            }
+        }
+        
+        .article-title{
+            text-align: center;
+            font-size: 16px !important;
+            font-family: 'Gotham' !important;
+            font-weight: bold !important;
+            background: #084C61;
+            color: white;
+            margin:0;
+        }
+    }
+}
+
+.loc-quiz{
+    background-color: $sl-primary;
+    background-image: url(../../img/pattern/patt_4_blue.svg)!important;
+    background-repeat: repeat;
+    background-size: 30px auto;
+    .loc-card{
+        background-color: white;
+        border-radius: 15px;
+        padding: 16px;
+        .card-title{
+            color: black !important;
+        }
+
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card-img{
+            border-radius: 0 0 25px 25px;
+        }
+    
+        @media (min-width: 768px) {
+            .card-img{
+                border-radius: 0 25px 25px 0;
+            }
+        }
+    }
+}
+
+.fp-block{
+    overflow-x: hidden;
+    h2{
+        font-size: 42px;
+    }
+
+    .fp-title:after{
+        background: #177E89;
+        content: "";
+        height: 3px;
+        margin-left: 1rem;
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 170px;
+        width: 100%;
+    }
+
+    .fp-decorative-img{
+        position: absolute;
+        width: 70px;
+        height: auto;
+        left: -50px;
+        top: -20px;
+        transform: rotate(-122deg);
+    }
+
+    .fp-img{
+        border-radius: 25px;
+    }
+
+    .fp-content-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.section-find-community.style-alt{
+    background-color: #E9E7EE !important;
+    background-image: url(../../img/pattern/patt_7_white.svg) !important;
+    background-repeat: repeat !important;
+    background-size: 30px auto !important;
+
+    .row{
+        background: white !important;
+        color: black !important;
+        h3, p{
+            color: black;
+        }
+    }
+    @media (max-width: 768px) {
+        .row{
+            padding: 16px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .section-find-community.style-alt{
+        padding: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1{
+        font-size: 36px !important;
+    }
+    h2{
+        font-size: 30px !important;
+    }
+    .hero{
+        .py-6{
+            padding: 30px 0 !important;
+        }
+    }
+
+    .guide-card{
+        padding: 0 !important;
+        box-shadow: unset !important;
+        margin: 15px !important;
+        text-align: center !important;
+    }
+
+    .fp-decorative-img{
+        display: none;
+    }
+
+    .article-image{
+        width: 100% !important;
+    }
+}

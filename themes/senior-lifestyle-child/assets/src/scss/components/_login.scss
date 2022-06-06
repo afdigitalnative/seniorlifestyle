@@ -1,0 +1,48 @@
+body.login {
+    background-color: $sl-white;
+}
+
+body.login div#login p#nav {
+    display: none;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    background-color: $sl-purple !important;
+    color: $sl-white;
+    border: 1px solid $sl-purple;
+    margin: 10px 10px 10px 10px;
+}
+
+body.login div#login h1 a {
+    background-image: url('../../img/sl-login.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 172px;
+    height: 70px;
+    width: 172px;
+}
+
+body.login div#login form#loginform input {
+    font-size: 15px;
+    color: $sl-primary;
+}
+
+.login form {
+    background-color: $sl-light-gray;
+    border-radius: 2px;
+    // border: 1px solid #EBE9E9;
+    font-weight: 400;
+    margin-left: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 1.5rem 1rem;
+}
+
+.login form .input, .login form input[type=checkbox], .login input[type=text] {
+    background: $sl-white;
+}
+
+.wp-core-ui .button-primary {
+    box-shadow: unset!important;
+    text-shadow: unset!important;
+}

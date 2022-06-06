@@ -1,0 +1,268 @@
+
+.page-title:before{
+  color: #177e89;
+  content: "//";
+  font-size: 3.5rem;
+  left: -1rem;
+  letter-spacing: -6px;
+  position: relative;
+}
+
+.nav-desc{
+    background-color: $sl-primary-light;
+    border-radius: 15px;
+    padding: 1.4rem;
+    .desc-title{
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    p{
+        color: white !important;
+    }
+    strong{
+      color: white !important;
+    }
+    .desc-link-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        a{
+            color: white;
+            transition: ease 0.3s;
+        }
+        a:hover{
+            color: $sl-primary;
+            transition: ease 0.3s;
+        }
+    }
+}
+
+.text-banner{
+  padding: 1rem;
+}
+
+#testimonials{
+  background-color: #fff;
+  background-image: url(../../img/pattern/patt_9_yellow.svg);
+  background-repeat: repeat;
+  background-size: 30px auto;
+  overflow-x: hidden;
+  padding: 50px 0 70px 0;
+  border: none;
+    .container{
+      border: none;
+      background-color: $sl-primary-light !important;
+      border-radius: 15px;
+      box-shadow: $sl-primary -30px 30px;
+      max-width: 1000px !important;
+      padding: 20px;
+    }
+    h3, h4, p{
+        color: white !important;
+    }
+    h3{
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: "Gotham", sans-serif;
+    }
+    h4{
+        font-size: 1rem;
+        font-family: "Gotham", sans-serif;
+    }
+    .testimonials-row-container {
+      background: $sl-primary-light !important;
+      border-radius: unset;
+      display: inline-block;
+      padding: 40px;
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+    p{
+      font-family: "Gotham", italic;
+      &:after{
+        color: $sl-primary;
+        content: "”";
+        font-family: "Noto Serif",serif;
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 80px;
+        position: absolute;
+        right:10px;
+        bottom: 73px;
+        top: unset !important;
+      }
+      &:before {
+        color: $sl-primary;
+        content: "“";
+        font-family: "Noto Serif",serif;
+        font-size: 120px;
+        font-weight: 700;
+        left: -21px;
+        line-height: 80px;
+        position: absolute;
+        top: -8px;
+        z-index: 1;
+      }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .page-title:before{
+        font-size: 30px !important;
+        left: -5px !important;
+        letter-spacing: -1px !important;
+    }
+}
+
+
+
+
+
+section.experience-section {
+      .community-section-title {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 2rem;
+        
+          .line-top {
+              position: absolute;
+              right: -240px;
+              top: 0;
+              bottom: 0;
+              display: block;
+              width: 210px;
+              height: 3px;
+              margin: auto;
+              background-color: gray;
+              z-index: -1;
+              
+              &:before {
+                  content: "";
+                  position: absolute;
+                  height: 115px;
+                  width: 3px;
+                  right: 0;
+                  bottom: 0;
+                  background-color: gray;					
+              }
+          }	  
+      }
+
+    .amenity-row {
+      margin-bottom: 2.5rem;
+      
+      .img-wrapper {
+          img {
+              width: 100%;
+              border-radius: 15px;
+          }
+      }
+
+      .content-wrapper {
+        h3 {
+          color: $sl-secondary;
+          margin-bottom: 1.25rem;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+        }
+        @include media-breakpoint-up(md) {
+          .left-line:before,
+          .right-line:after {
+            background-color: #74ABB1;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            position: relative;
+            width: auto;
+          }
+
+          .left-line:before {
+            /*right: 1em;
+            margin-left: -100%;*/
+              left: -150px;
+              position: absolute;
+              width: 130px;
+          }
+          .right-line:after {
+            /*
+            left: 1em;
+            margin-right: -100%;
+            */
+            flex-grow: 1;
+            margin-left: 20px;
+          }
+        }
+        .amenity-excerpt-blur {
+          max-height: 280px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          content: "";
+          position: relative;
+          margin-bottom: 15px;
+          
+          @include media-breakpoint-down(sm) {
+              max-height: 165px;
+          }
+        }
+        .amenity-excerpt-blur:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: linear-gradient(transparent 100px, white);
+        }
+
+        .amenity-excerpt ul {
+          padding-left: 25px;
+          
+          li {
+              break-inside: avoid-column;
+          }
+          
+          @include media-breakpoint-up(sm) {
+            column-gap: 60px;
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;				  
+          }
+        }
+          @include media-breakpoint-down(sm) {
+              order: 1;
+          }			  
+      }
+
+      .img-wrapper {
+          @include media-breakpoint-down(sm) {
+              order: 2;
+              margin-top: 20px;
+          }
+      }
+      
+      .more-content-btn {
+        margin-bottom: 0;
+        text-transform: unset;
+        display: inline-block;
+        border-bottom: 1px solid;
+        color: $si-primary;
+        
+        &:after {
+          display: none;
+        }
+      }
+
+      .amenity-content {
+        margin: 1.5rem 0;
+      }
+
+      .amenity-content-reg {
+        display: none;
+      }
+    }
+  }

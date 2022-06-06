@@ -1,0 +1,16 @@
+.hero{
+    background-image: url(../../img/pattern/patt_4_blue.svg) !important;
+    background-color: $sl-primary;
+    background-repeat: repeat;
+    background-size: 30px auto;
+    color: white;
+    .center-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2{
+        color: white !important;
+    }
+}

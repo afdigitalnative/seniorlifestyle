@@ -1,0 +1,48 @@
+//
+// BUTTON MIXIN
+//
+
+@mixin btn-primary($color: $sl-secondary) {
+    display: block;
+    min-width: 175px;
+    background-color: $color;
+    border: 1px solid $color;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 3px;
+
+    &:hover {
+        color: #fff;
+        background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+        text-decoration: none;
+    }
+
+        @include media-breakpoint-down(sm) {
+            min-width: 150px;
+        }
+
+    @content;
+}
+
+//
+// DYNAMIC CHILD ELEMENTS
+//
+
+@mixin with-count($n) {
+    @if $n == 1 {
+        &:first-child:nth-last-child(1) {
+            @content;
+        }
+    }
+    @else {
+        &:first-child:nth-last-child(#{$n}),
+        &:first-child:nth-last-child(#{$n}) ~ & {
+            @content;
+        }
+    }
+}

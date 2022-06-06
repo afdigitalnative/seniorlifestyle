@@ -1,0 +1,183 @@
+// staff_and_leadership
+
+main{
+    overflow-x: hidden;
+}
+
+.page-template-template-staff-landing-page {
+    p{
+        text-align: left !important;
+    }
+    .page-title-wrapper {
+        padding: 0 0 1.875rem 0;
+        text-align: left !important;
+    }
+    .page-title-wrapper:before{
+        color: #177e89;
+        content: "//";
+        font-size: 3.5rem;
+        left: -50px;
+        position: absolute;
+        top: 20px;
+        letter-spacing: -10px;
+        @include media-breakpoint-down(sm) {
+            display: none !important;
+        }
+    }
+
+    .banner-content-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .call-to-action {
+        border-top: none !important;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 70px 0px;
+
+        .cta{
+            border: 20px solid #177e89;
+            .cta-title{
+                font-family: "Noto Serif", serif;
+                margin-bottom: 10px !important;
+            }
+
+            .btn-primary-lightblue{
+                background-color: $sl-primary;
+            }
+        }        
+        
+    }
+
+    .wp-post-image{
+        border-radius: 15px;
+    }
+
+}
+
+
+
+.page-template-template-staff-landing-page .text-banner-wrapper {
+    padding: 0;
+    margin: 0 auto;
+    background-color: transparent;
+    margin-bottom: 2.1875rem;
+
+    hr {
+        display: none;
+    }
+
+}
+
+.quick-list{
+    li{
+        text-decoration: underline;
+    }
+}
+
+// archive page
+.executive-leadership-wrap {
+    // margin-top: 2.1875rem;
+    padding-top: 3.125rem;
+    // border-top: 1px solid $sl-borderline;
+    // border-bottom: 1px solid $sl-borderline;
+    text-align: center;
+}
+
+.senior-leadership-wrap {
+    padding-top: 3.125rem;
+    text-align: center;
+}
+
+.leadership-text{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.leader-card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.leader-card {
+    margin-bottom: 2.5rem;
+    width: 22.08%;
+
+    p {
+        line-height: 1.2;
+    }
+
+    h3 {
+        margin :10px 0 5px;
+        text-align: left !important;
+        font-size: 26px !important;
+        line-height: 1.2;
+    }
+
+    // when width changes here, update nth's below
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+}
+
+// not required — for dev purpose only
+// .leader-card:nth-child(4n+0):nth-last-child(-n+4) ~ .leader-card {
+    //     border: 3px solid green;
+    //
+    //
+// }
+
+.leader-card:nth-child(4n+1):nth-last-child(-n+4) ~ .leader-card {
+    margin-left: calc(22.08% * .176);
+    // calc * .176 used for left margin width
+    margin-right: auto;
+
+    @include media-breakpoint-down(sm) {
+        margin-left: 0;
+    }
+
+}
+
+//  not required — for dev purpose only
+// .leader-card:nth-child(4n+2):nth-last-child(-n+4) ~ .leader-card {
+    //   border: 3px solid blue;
+    //
+    //
+// }
+
+.leader-card:nth-child(4n+3):nth-last-child(-n+4):last-child {
+    margin-left: -22.08%;
+
+    @include media-breakpoint-down(sm) {
+        margin-left: 0;
+    }
+
+}
+
+.fancy-hr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &.full-width{
+        margin-left: -40%;
+        margin-right: -40%;
+    }
+    img{
+        max-width: 40px;
+        height: auto;
+        margin: 1.6rem;
+    }
+}
+
+.fancy-hr:before, .fancy-hr:after{
+    flex:1;
+    content: '';
+    height: 1px;
+    background: rgb(233, 191, 7);
+}

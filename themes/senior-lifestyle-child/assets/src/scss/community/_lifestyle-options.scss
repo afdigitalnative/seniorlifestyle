@@ -1,0 +1,388 @@
+@mixin living_head_style($theme, $button-shadow) {
+	body.#{$theme} {
+		section.lifestyle-options-section {
+
+			.community-section-title {
+				position: relative;
+				display: inline-block;
+				margin-bottom: 2rem;
+			  
+				.line-top {
+					position: absolute;
+					right: -240px;
+					top: 0;
+					bottom: 0;
+					display: block;
+					width: 210px;
+					height: 3px;
+					margin: auto;
+					background-color: $button-shadow;
+					z-index: 1;
+					
+					&:before {
+						content: "";
+						position: absolute;
+						height: 135px;
+						width: 3px;
+						right: 0;
+						bottom: 0;
+						background-color: $button-shadow;					
+					}
+				}	  
+			}
+		}
+	}
+}
+
+@include living_head_style(
+	slc, 
+	$sl-button-shadow
+);
+@include living_head_style(
+	signature, 
+	$si-button-shadow
+);
+@include living_head_style(
+	sheridan, 
+	$sh-button-shadow
+);
+
+
+@mixin living_style($color-scheme, $pattern, $color) {
+	body {
+		section.lifestyle-options-section {
+		  background-color: $sl-white;
+		  padding-top: 3rem;
+		  
+		  @include media-breakpoint-up(sm){
+			padding: 4rem 0 0;
+		  }
+
+		  .lo-link {
+			position: relative;
+			
+			/*
+			&:hover:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -5px;
+				display: block;
+				width: 100%;
+				border-bottom: 3px solid;
+			}
+			*/
+			&:hover {
+				text-decoration: underline;
+			}
+		  }
+
+		  .lo-card-contents.#{$color-scheme} {
+			margin: 0;
+			margin-bottom: 2.5rem;
+			
+			@include media-breakpoint-down(sm){
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			img {
+				border-radius: 15px;
+			}
+
+			@include media-breakpoint-up(sm){
+			  .card-bg {
+				display: flex !important;
+				align-items: center;
+				position:relative;
+				padding-top: 70px;
+				padding-bottom: 70px;
+				height: fit-content;
+	
+				z-index:0;
+
+				img {
+				  width: 100%;
+				  /*height: 100%;*/
+				  object-fit: contain;
+				}
+				
+				.card-bg-crop {
+					position: absolute;
+					top: 0;
+					width: calc(100% + 5px);
+					height: calc(100% + 5px);
+					clip-path: polygon(63% 0, 100% 0, 100% 100%, 28% 100%);
+					background: #fff;
+					z-index: -1;
+				}
+				
+				  &:before {
+					content:"";
+					position:absolute;
+					z-index:-3;
+					top:0;
+					bottom:0;
+					width: calc(50vw - 110px);
+					height: 100%;
+					margin: auto;
+					
+					background-image: url("../../img/pattern/lifestyle/#{$pattern}.svg");
+					background-repeat: repeat;
+					background-size: 30px auto;
+				  }	
+
+				  &:after {
+					content:"";
+					position:absolute;
+					z-index:-3;
+					top:0;
+					bottom:0;
+					width: calc(50vw - 110px);
+					height: 100%;
+					margin: auto;			  
+				  }	
+
+				  &.card-bg-left {
+					/*justify-content: flex-end!important;*/
+					padding-left: 60px;
+
+					.card-bg-crop {
+						right: -3px;
+						top: -3px;
+					}					
+					&:before {
+						/*clip-path: polygon(0 0, 35% 0, 57% 100%, 0% 100%);*/
+						right: 0;
+					}
+					
+					&:after {
+						right: 5px;
+						background: linear-gradient(270deg, $color 20%, rgba($color, 0.75));
+					}
+				  }
+
+				  &.card-bg-right {
+					padding-right: 60px;
+					
+					.card-bg-crop {
+						left: -3px;
+						top: -3px;
+						transform: scale(-1, -1);
+					}
+					&:before {
+						/*clip-path: polygon(67% 0, 100% 0, 100% 100%, 43% 100%);*/
+						left: 0;
+					}
+					
+					&:after {
+						left: 0px;
+						background: linear-gradient(-270deg, $color 20%, rgba($color, 0.75));
+					}
+				  }		
+			  }
+			}
+			
+			@include media-breakpoint-down(lg){
+				.card-bg {
+					&:before,
+					&:after {
+						width: calc(100% + 15px);
+					}
+				}
+			}
+			
+			.lo-content {
+				position: relative;
+				text-overflow: ellipsis;
+				
+				.lo-card-content {
+					height: auto;
+				}
+				
+				
+				.content-wrap.fading {
+					
+					
+					.lo-card-content {
+						position: relative;
+						max-height: 350px;
+						overflow: hidden;
+						
+						&:after {
+							content: "";
+							height: 100%;
+							left: 0;
+							position: absolute;
+							top: 0;
+							width: 100%;
+							background: linear-gradient(transparent 150px,#fff);					
+						}						
+					}				
+				}
+				
+				&.left-content {
+					padding-left: 150px;
+					padding-top: 80px;
+					padding-bottom: 80px;
+					
+					@include media-breakpoint-down(md) {
+						padding-left: 15px;
+						padding-bottom: 0px;
+						padding-top: 0px;
+					}
+				}
+				
+				&.right-content {
+					padding-left: 60px;
+					padding-top: 80px;
+					padding-bottom: 80px;
+					
+					@include media-breakpoint-down(md) {
+						padding-left: 15px;
+						padding-bottom: 0px;
+						padding-top: 0px;
+					}
+					
+				}
+				
+				.lo-card-hdr {
+					h3 {
+					  position: relative;
+					  display: flex;
+					  align-items: center;
+					  color: $sl-secondary;
+					  margin-bottom: 1.25rem;
+					  
+					  .lo-card-icon {
+						left: -50px;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 38px;
+						height: 38px;
+						padding: 5px;
+						margin: auto;
+						background-color: $color;
+						border-radius: 50%;
+						
+						img {
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+					  }
+					  
+					  @include media-breakpoint-down(md) {
+						
+						.lo-card-icon {
+							display: none;
+						}
+					  }
+					}
+
+					@include media-breakpoint-up(md) {
+
+					  .left-line:before,
+					  .right-line:after {
+						background-color: $color;
+						content: "";
+						display: inline-block;
+						height: 2px;
+						position: relative;
+						vertical-align: middle;
+					  }
+
+					  .left-line:before {
+						position: absolute;
+						left: -150px;
+						width: 85px;				  
+					  }
+					  .right-line:after {
+						margin-left: 15px;
+						flex-grow: 1;
+					  }
+					}
+				}
+				ul {
+				  list-style-type: none;
+				  padding-left: 0;
+
+				  li {
+					padding-bottom: 0.25rem;
+					padding-left: 1.5rem;
+					position: relative;
+
+					&::before {
+					  position: absolute;
+					  font-family: "Font Awesome 5 Pro";
+					  font-weight: 900;
+					  content: "\f058";
+					  top: 1px;
+					  left: 0;
+					  color: $color;
+					  font-size: 0.75rem;
+					}
+				  }
+				}			
+			}
+		  }
+		}
+	}
+}
+
+@include living_style(
+	yellow,
+	pattern_5,
+	#FFC857
+);
+@include living_style(
+	red,
+	pattern_7,
+	#DB3A34
+);
+@include living_style(
+	darkred,
+	pattern_8,
+	#762057
+);
+@include living_style(
+	blue,
+	pattern_1,
+	#084C61
+);
+
+//for sheridan
+body.sheridan .lo-cards-container {
+  .lo-card {
+    .lo-card-hdr h3 {
+      color: $sh-secondary;
+    }
+
+    .lo-card-content strong {
+      color: $sl-black;
+    }
+
+    .lo-card-content ul li {
+      &::before {
+        color: $sh-primary;
+      }
+    }
+  }
+}
+
+//for signature
+body.signature .lo-cards-container {
+  .lo-card {
+    .lo-card-hdr h3 {
+      color: $si-secondary;
+    }
+
+    .lo-card-content ul li {
+      &::before {
+        color: $si-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+.call-to-action {
+    border-top: 1px solid $sl-borderline;
+    max-width: 1000px;
+    margin: 0 auto;
+    // margin-top: 60px; might be uneeded
+    padding: 60px 0px 0px 0px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 2.5rem;
+    padding: 40px 0px 0px 0px;
+
+    }
+
+    .Grid--gutters {
+        @include media-breakpoint-down(sm) {
+            margin-left: 0em;
+        }
+
+    }
+
+}
+
+.call-to-action .cta {
+    background-color: $sl-extra-light-gray;
+    border-radius: 10px;
+    padding: 3.125rem;
+    text-align: center;
+    flex: 0 0 80%;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+        padding: 2.125rem;
+    }
+
+    .cta-title {
+        color: $sl-primary;
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 1.875rem;
+        line-height: 1.2;
+    }
+
+    .cta-text {
+        color: $sl-font-color;
+        font-size: 1.125rem;
+        margin-bottom: 1.875rem;
+        line-height: 27px;
+    }
+
+}
+
+/**********************************************
+***			Callout Box Section				***
+***********************************************/
+.section-callout-box {
+	position: relative;
+	margin-top: 150px;
+	
+	@include media-breakpoint-down(sm) {
+		margin-top: 90px;
+	}
+	
+	&.callout-box-background {
+		margin-top: 100px;
+		padding: 60px 0;
+		background-color: $primary;
+		
+		@include media-breakpoint-down(sm) {
+			padding: 20px 0;
+		}
+		
+		&:before {
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;		
+			background-image: url(./assets/img/pattern/patt_4_blue.svg);
+			background-repeat: repeat;
+			background-size: 30px auto;
+		}
+
+		.row {
+			background-color: #fff;
+			
+			.callout-image {
+				background-color: #fff;
+			}
+			
+			.callout-content {
+				background-color: #fff;
+				
+				h3 {
+					color: $primary;
+				}
+				
+				p {
+					color: $sl-font-color;
+				}
+				
+				.btn-primary-lightblue {
+					padding: 19px 70px;
+					
+					@include media-breakpoint-down(sm) {
+						padding: 19px 35px;
+						width: 100%;
+						max-width: 300px;
+					}
+				}
+			}
+		}
+	}
+	
+	.container {
+		max-width: 1260px !important;
+		
+		@media screen and (max-width: 1400px) {
+			padding: 0 70px;
+			
+			.row {
+				svg {
+					&.top {
+						transform: scale(0.7);
+					}
+					&.bottom {
+						transform: scale(-0.7);
+					}							
+				}
+			}
+		}
+		
+		@include media-breakpoint-down(sm) {
+			padding: 0 35px;
+		}				
+	}
+	.row {
+		position: relative;
+		background-color: $primary;
+		border-radius: 15px;
+		
+		svg {
+			position: absolute;
+			width: 115px;
+			height: 115px;
+			z-index: -1;
+			
+			path {
+				fill: rgba($primary, 0.8);
+			}
+			
+			&.top {
+				top: -65px;
+				left: -65px;
+			}
+			&.bottom {
+				transform: scale(-1, -1);
+				right: -65px;
+				bottom: -65px;
+				z-index: -1;
+			}
+			
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+	}
+	
+	.callout-image {
+		background-color: #E7EBEE;
+		padding: 50px 20px;
+		flex: 0 0 30%;
+		border-radius: 13px 0 0 13px;
+		display: flex;
+		align-items: center;
+		
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+		
+		&.full-image {
+			padding: 0 !important;
+			
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		
+		@include media-breakpoint-down(sm) {
+			flex: 0 0 100%;
+			padding: 35px;
+			border-radius: 13px 13px 0 0;
+			
+			img {
+				max-width: 300px;
+				margin: auto;
+			}
+			
+			&.full-image {
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	
+	.callout-content {
+		background-color: $primary;
+		padding: 50px;
+		border-radius: 0 13px 13px 0;
+		display: flex;
+		align-items: center;				
+		
+		@include media-breakpoint-down(sm) {
+			flex: 0 0 100%;
+			padding: 35px;
+			border-radius: 0 0 13px 13px;
+		}
+		
+		h3 {
+			color: #fff;
+		}
+		p {
+			color: #fff;
+		}
+		.btn-primary-lightblue {
+			padding: 19px 35px;
+			margin-top: 25px;
+		}
+	}
+	
+	&.content-left {
+		@include media-breakpoint-up(md) {
+			.callout-image {
+				border-radius: 0 13px 13px 0;
+				
+				img {
+					border-radius: 0 13px 13px 0;
+				}
+			}
+			.callout-content {
+				border-radius: 13px 0 0 13px;
+				
+				img {
+					border-radius: 0 13px 13px 0;
+				}
+			}
+		}
+		
+		@include media-breakpoint-down(sm) {
+			.row {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}

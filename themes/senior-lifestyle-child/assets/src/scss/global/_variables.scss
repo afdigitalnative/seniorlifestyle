@@ -1,0 +1,122 @@
+
+//
+// COLORS
+//
+///////////////////////////////
+$primary: #084C61;
+$primary-light: #177E89;
+$primary-dark: #053b4c;
+$primary-navy: #177E89;
+$primary-purple: #762057;
+$primary-red: #ff4438;
+$primary-yellow: #FFC857;
+$loc-red: #DB3A34;
+$primary-gray: #E9E7EE;
+
+$sl-primary: #084C61;
+$sl-primary-dark: #053b4c;
+$sl-primary-light: #177E89;
+$sl-secondary: $sl-primary;
+$sl-secondary-dark: $sl-primary-dark;
+
+$sl-tertiary: #177E89;
+
+$sl-warning: #ff4438;
+
+$sl-purple: $sl-primary;
+$sl-dark-blue: #053b4c;
+$sl-light-blue: $sl-tertiary;
+$sl-teal : $sl-light-blue;
+$sl-red: $sl-warning;
+$sl-green: #15AA4C;
+$sl-white: #FFFFFF;
+$sl-black: #000000;
+$sl-yellow: #FFC857;
+$sl-borderline: #E9EBEB;
+$sl-button-shadow: $sl-yellow;
+
+//for sheridan
+$sh-primary: #262626;
+$sh-primary-dark: #101010;
+$sh-secondary: #ff4438;
+$sh-secondary-dark: #DB4138;
+$sh-tertiary: #646464;
+$sh-button-shadow: $sh-secondary;
+
+//for signature
+$si-primary: #084C61;
+$si-primary-dark: #053b4c;
+$si-primary-light: #177E89;
+$si-secondary: #3DBFBB;
+$si-secondary-dark: #319A96;
+$si-tertiary: #10807C;
+$si-button-shadow: $si-secondary;
+
+// Grays
+$sl-gray: #888;
+$sl-light-gray: #E8EDEF;
+$sl-extra-light-gray: #f4f4f4;
+
+// Footer
+$sl-footer-white: #ffffff;
+
+
+$themes: (
+  slc: $sl-primary $sl-primary-dark $sl-primary-light $sl-tertiary $sl-secondary,
+  signature: $si-primary $si-primary-dark $sl-primary-light $si-tertiary $si-secondary,
+  sheridan: $sh-primary $sh-primary-dark $sl-primary-light $sh-tertiary $sh-secondary
+) !default;
+
+
+// SECONDARY PALLET
+
+//
+// FONT FAMILIES
+//
+///////////////////////////////
+
+// Font path (within `assets`)
+$gotham-font-path: 'assets/fonts/custom';
+$fa-font-path: 'assets/fonts/fontawesome';
+
+
+$sl-font-family: 'Gotham', 'Arial', 'Helvetica', sans-serif;
+//$comm-font-family: 'Arial', 'Helvetica', sans-serif;
+$sl-font-color: #1a1a1a;
+$font-main: 'Gotham', 'Arial', 'Helvetica', sans-serif;
+$font-noto: 'Noto Serif', serif;
+$font-nunito: 'Nunito', sans-serif;
+
+//
+// FONT SIZES
+//
+//////////////////////////////
+
+$h1-base-size: 3.5rem; // 56px
+$h1-mobile-size: 2.25rem; // 36px
+
+$h2-base-size: 2.75rem;  // 44px
+$h2-mobile-size: 1.875rem; // 30px
+
+$h3-base-size: 2.1875rem;   // 35px
+$h3-mobile-size: 1.625rem; // 26px
+
+$h4-base-size: 1.75rem; // 28px
+$h4-mobile-size: 1.375rem; // 22px
+
+$h5-base-size: 1.375rem; // 22px
+$h5-mobile-size: 1.125rem; // 18px
+
+$h6-base-size: 1rem; // 16px
+
+//
+// Community Font SIZES
+//
+//////////////////////////////
+
+
+
+//
+// HEADER
+//
+//////////////////////////////

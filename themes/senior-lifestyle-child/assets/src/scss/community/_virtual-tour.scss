@@ -1,0 +1,59 @@
+section.virtual-tour-section {
+    padding: 3rem 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0 5rem 0;
+    }
+
+
+
+    .vt-hdr-wrapper {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+
+    }
+
+    .vt-frame-wrapper {
+        width: 600px;
+        height: 450px;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .h_iframe {
+        position: relative;
+    }
+
+    .h_iframe .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .h_iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 450px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: 120%;
+            margin: 0 auto;
+        }
+
+
+
+    }
+
+}

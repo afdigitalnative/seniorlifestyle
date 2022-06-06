@@ -1,0 +1,355 @@
+.btn-purple{
+
+    @include btn-primary($sl-secondary);
+}
+
+input[type=submit],
+.hs-button {
+
+    @include btn-primary($primary-light);
+}
+
+.btn-primary {
+    @include btn-primary($sl-secondary);
+
+    &:hover {
+        color: #fff;
+        background-color: darken($sl-purple, 10%);
+        text-decoration: none;
+    }
+}
+.btn-purple-border {
+    display: block;
+    min-width: 175px;
+    background-color: white;
+    border: 2px solid $sl-secondary;
+    color: $sl-secondary;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 39.5px;
+
+    &:hover {
+        color: darken($sl-purple, 10%);
+        text-decoration: none;
+    }
+}
+
+.more-content-btn {
+    display: inline-block;
+	color: $sl-purple;
+    /*text-transform: lowercase;*/
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin-bottom: 1.5rem;
+	border-bottom: 1px solid;
+	
+    position: relative;
+
+    &:hover {
+        color: lighten($sl-purple, 20%);
+    }
+	/*
+    &::after {
+        position: relative;
+        font-family: 'Font Awesome 5 Pro';
+        content: '\f078';
+        font-weight: 900;
+        font-size: 0.825rem;
+        padding-left: 5px;
+    }
+	
+    &.content-expanded {
+        &::after {
+            content: '\f077';
+        }
+    }
+	*/
+
+}
+
+//for sheridan
+/*
+body.sheridan{
+    .btn-purple,
+input[type=submit],
+.hs-button {
+
+    @include btn-primary($sh-secondary);
+}
+.btn-primary {
+    @include btn-primary($sh-secondary);
+
+    &:hover {
+        background-color: darken($sh-secondary, 10%);
+    }
+}
+.btn-purple-border {
+    border: 2px solid $si-secondary;
+    color: $sh-secondary;
+
+    &:hover {
+        color: darken( $sh-secondary, 10%);
+    }
+}
+.more-content-btn {
+    color: $sh-secondary;
+    &:hover {
+        color: lighten($sh-secondary, 20%);
+    }
+}
+}
+*/
+
+//for signature
+/*
+body.signature{
+    .btn-purple,
+input[type=submit],
+.hs-button {
+
+    @include btn-primary($si-secondary);
+}
+.btn-primary {
+    @include btn-primary($si-secondary);
+
+    &:hover {
+        background-color: darken($si-secondary, 10%);
+    }
+}
+.btn-purple-border {
+    border: 2px solid $si-secondary;
+    color: $si-secondary;
+
+    &:hover {
+        color: darken( $si-secondary, 10%);
+    }
+}
+.more-content-btn {
+    color: $si-secondary;
+    &:hover {
+        color: lighten($si-secondary, 20%);
+    }
+}
+}
+*/
+.btn {
+    display: block;
+    min-width: 175px;
+    font-weight: 500;
+    line-height: 1.25rem;
+	padding: 19px 35px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 39.5px;
+    width: auto;
+    display: inline-block;
+	text-decoration: none;
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}
+	
+	&.btn-link {
+		&:focus, &:active {
+			box-shadow: none !important;
+		}
+	}
+}
+.btn-primary-lightblue {
+    display: block;
+    min-width: 175px;
+    background-color: $primary-light;
+    // border: 1px solid $primary-light;
+    color: #fff;
+	font-family: $sl-font-family;
+    font-weight: 500;
+    line-height: 1.25rem;
+	padding: 16px 35px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 39.5px;
+    width: fit-content;
+    display: inline-block;
+	text-decoration: none;
+	
+	&.btn-outline {
+		background-color: transparent;
+		border: 2px solid $primary-light;
+		color: $primary-light;
+		
+		&:hover {
+			background-color: $primary-light;
+			color: #fff;
+		}
+		&:active, &:focus {
+			box-shadow: none;
+		}
+	}
+	
+	&:active, &:focus {
+		box-shadow: inset 1px 0px 3px 0px #00000070;
+		text-decoration: underline;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}	
+}
+
+.btn-primary-navy {
+    display: block;
+    // min-width: 400px;
+    background-color: $sl-primary;
+    border: 1px solid $sl-primary;
+    color: #fff;
+	font-family: $sl-font-family;	
+	font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25rem;
+	padding: 14px 35px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 39.5px;
+    margin-top: 8px;
+    width: auto;
+    display: inline-block;
+	text-decoration: none;
+	
+	&.btn-outline {
+		background-color: transparent;
+		border: 2px solid $primary;
+		color: $primary;
+		
+		&:hover {
+			background-color: $primary;
+			color: #fff;
+		}
+		&:active, &:focus {
+			box-shadow: none;
+		}
+	}
+	
+	&:active, &:focus {
+		box-shadow: inset 1px 0px 3px 0px #00000070;
+		text-decoration: underline;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}
+}
+
+.btn-primary-purple {
+    display: block;
+    // min-width: 400px;
+    background-color: $primary-purple;
+    border: 1px solid $primary-purple;
+    color: #fff;
+	font-family: $sl-font-family;	
+	font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25rem;
+	padding: 19px 35px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 39.5px;
+    margin-top: 8px;
+    width: auto;
+    display: inline-block;
+	text-decoration: none;
+	
+	&.btn-outline {
+		background-color: transparent;
+		border: 2px solid $primary-purple;
+		color: $primary;
+		
+		&:hover {
+			background-color: $primary-purple;
+			color: #fff;
+		}
+		&:active, &:focus {
+			box-shadow: none;
+		}
+	}
+	
+	&:active, &:focus {
+		box-shadow: inset 1px 0px 3px 0px #00000070;
+		text-decoration: underline;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}
+}
+
+.btn-small {
+	padding: 13px 35px !important;
+	font-size: 18px !important;
+	line-height: 20px !important;
+}
+
+.btn-primary-white {
+    display: block;
+    min-width: 175px;
+    background-color: white;
+    // border: 1px solid $primary-light;
+    color: $primary-light;
+	font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25rem;
+	padding: 16px 35px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 27.5px;
+    width: fit-content;
+    display: inline-block;
+	text-decoration: none;
+	
+	&.btn-outline {
+		background-color: transparent;
+		border: 2px solid $primary;
+		color: $primary;
+		
+		&:hover {
+			background-color: $primary;
+            color:white;
+		}
+		&:active, &:focus {
+			box-shadow: none;
+		}
+	}
+	
+	&:active, &:focus {
+		box-shadow: inset 1px 0px 3px 0px #00000070;
+		text-decoration: underline;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}	
+}

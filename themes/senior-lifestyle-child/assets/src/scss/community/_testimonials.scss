@@ -1,0 +1,172 @@
+@mixin testimonial_style($theme, $button-shadow) {
+	body.#{$theme} {
+		section.testimonial-section {
+		  .container {
+				.community-section-title {
+					display: inline-block;
+					text-align: center;
+					margin-bottom: 2rem;
+					position: relative;
+			  
+					.line-top {
+						position: absolute;
+						right: -440px;
+						top: 0;
+						bottom: 0;
+						display: block;
+						width: 410px;
+						height: 3px;
+						margin: auto;
+						background-color: $button-shadow;
+						z-index: 1;
+						
+						&:before {
+							content: "";
+							position: absolute;
+							height: 80px;
+							width: 3px;
+							right: 0;
+							top: 0;
+							background-color: $button-shadow;					
+						}
+					}
+				}
+		  }
+
+			.carousel {
+				position: relative;
+				background-image: url("../../img/#{$theme}_testimonial_theme.png");
+				overflow: hidden;
+				z-index: 10;
+			   
+				.squares {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					width: 112px;
+					height: 112px;
+					stroke: $button-shadow;
+					
+					@if $theme != sheridan {
+						display: none;
+					}
+					
+					&.left {
+						left: -50px;
+					}
+					&.right {
+						right: -50px;
+					}
+				}
+			}
+			   
+		  .carousel-text {
+			.carousel-item.active {
+			  display: block;
+			}
+
+			.carousel-item {
+			  padding: 60px 120px;
+			  
+			  @include media-breakpoint-down(sm) {
+				padding: 0px 0px;
+			  }
+			}
+
+			.carousel-caption {
+			  display: flex;
+			  justify-content: center;
+			  flex-direction: column;
+			  position: initial;
+			  left: initial;
+			  right: initial;
+			  min-height: 300px;
+			  max-width: 840px;
+			  margin: 0 auto;
+
+			  p {
+				font-size: rem(28);
+				font-style: italic;
+				line-height: 1.5em;
+				color: $sl-white;
+				
+				@include media-breakpoint-down(sm) {
+					font-size: 18px;
+					padding-top: 80px;
+					padding-bottom: 50px;
+				}
+			  }
+
+			  blockquote {
+				font-family: $font-noto;
+				position: relative;
+				margin: 8px;
+				padding: 8px 32px 8px 48px;
+				
+				@include media-breakpoint-down(sm) {
+					font-size: 30px;
+				}
+			  }
+
+			  blockquote:before {
+				position: absolute;
+				font-size: 6em;
+				line-height: 1;
+				top: 0;
+				left: 0;
+				content: "\201C";
+			  }
+			  blockquote:after {
+				position: absolute;
+				float: right;
+				font-size: 6em;
+				line-height: 1;
+				right: 0;
+				bottom: -0.4em;
+				content: "\201D";
+			  }
+
+			  blockquote cite:before {
+				content: "\2013";
+			  }
+			}
+		  }
+
+		  .carousel-indicators {
+			li {
+			  border-radius: 50%;
+			  width: 14px;
+			  height: 14px;
+			  opacity: 0.9;
+			  
+			  @if $theme != sheridan {
+				background-color: #5DB1B9;
+			  } @else {
+				background-color: #FFF;
+			  }
+			  &.active {
+				  @if $theme != sheridan {
+					background-color: #FFF;
+				  } @else {
+					background-color: #DB3A34;
+				  }			  
+			  }
+			}
+		  }
+		}
+	}
+}
+	
+@include testimonial_style(
+	slc,
+	$sl-button-shadow
+);
+@include testimonial_style(
+	signature,
+	$si-button-shadow
+);
+@include testimonial_style(
+	sheridan,
+	$sh-button-shadow
+);

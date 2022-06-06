@@ -1,0 +1,312 @@
+//
+// FLEXBOX STICKY FOOTER
+//
+///////////////////////////////
+    html, body, .site {
+        min-height: 100vh;
+    }
+
+    .site {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site-content {
+        flex-grow: 1;
+    }
+
+//
+// BASIC GRID STYLES
+// NEEDS REFINEMENT SEPTEMBER 2, 2019
+///////////////////////////////
+    .Grid {
+      // display: flex;
+      // flex-flow: row;
+      // flex-wrap: wrap;
+
+      // border:1px solid red;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  position: relative;
+  margin: 0 auto;
+
+
+    }
+
+    .centertext {
+      text-align: center;
+    }
+
+    .Grid-cell {
+      margin-bottom: 1.875rem;
+      flex: 1;
+
+      @media (max-width: 767.98px) {
+          margin-bottom: 0px;
+      }
+
+    }
+
+// With gutters
+    .Grid--gutters {
+      margin-left: -1em;
+
+        // @media screen and (max-width:680px) {
+        //     margin-left: 0em;
+        // }
+
+    }
+
+    .Grid--gutters .Grid-cell {
+      padding-left: 1em;
+    }
+
+    .Grid--gutters .Grid--nested .Grid-cell:first-of-type .dev {
+      margin-right: 1em;
+    }
+
+// Justify per row
+    .Grid--right {
+      justify-content: flex-end;
+    }
+
+    .Grid--center {
+      justify-content: center;
+    }
+
+// Alignment per row
+    .Grid--top {
+      align-items: flex-start;
+    }
+
+    .Grid--bottom {
+      align-items: flex-end;
+    }
+
+    .Grid--center {
+      align-items: center;
+    }
+
+// Alignment per cell
+    .Grid-cell--top {
+      align-self: flex-start;
+    }
+
+    .Grid-cell--bottom {
+      align-self: flex-end;
+    }
+
+    .Grid-cell--center {
+      align-self: center;
+    }
+
+    .content-align {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content-align-item {
+      max-width: 50%;
+    }
+
+    .content-align-item--top {
+      align-self: flex-start;
+    }
+
+    .content-align-item--bottom {
+      align-self: flex-end;
+    }
+
+//
+// BASE CLASSES FOR ALL MEDIA - MOBILE FIRST
+//
+///////////////////////////////
+    .Grid--cols-2 > .Grid-cell {
+      flex: 0 0 100%;
+    }
+
+    .Grid--cols-3 > .Grid-cell {
+      flex: 0 0 100%;
+    }
+
+    .Grid--cols-4 > .Grid-cell {
+      flex: 0 0 100%;
+    }
+
+    .Grid--cols-6 > .Grid-cell {
+      flex: 0 0 calc(50% - 1em);
+    }
+
+    .Grid--cols-12 > .Grid-cell {
+      flex: 0 0 calc(33.3333% - 1em);
+    }
+
+    .Grid--layout .aside, .Grid--layout .main {
+      flex: 1 100%;
+    }
+
+// One of -- columns
+    .Grid--1of2 > .Grid-cell,
+    .Grid--1of4 > .Grid-cell:first-of-type,
+    .Grid--1of3 > .Grid-cell:first-of-type {
+      flex: 0 0 100%;
+    }
+
+    .Grid--1of6 > .Grid-cell:first-of-type {
+      flex: 0 0 50%;
+    }
+
+    .Grid--fit > .Grid-cell {
+      flex: 1;
+    }
+
+    .Grid--full > .Grid-cell {
+      flex: 0 0 100%;
+    }
+
+// Tablet (medium) screens
+    @media (min-width: 30em) {
+      .Grid--cols-4 > .Grid-cell {
+        flex: 0 0 calc(50% - 1em);
+      }
+
+      .Grid--cols-6 > .Grid-cell {
+        flex: 0 0 calc(33.3333% - 1em);
+      }
+
+      .Grid--cols-12 > .Grid-cell {
+        flex: 0 0 calc(16.6666% - 1em);
+      }
+
+      .Grid--layout .aside {
+        flex: 1 calc(25% - 1em);
+      }
+
+      .Grid--1of2 > .Grid-cell {
+        flex: 0 0 50%;
+      }
+
+      .Grid--1of6 > .Grid-cell:first-of-type {
+        flex: 0 0 30%;
+      }
+
+      .Grid--1of4 > .Grid-cell:first-of-type {
+        flex: 0 0 50%;
+      }
+
+      .Grid--1of3 > .Grid-cell:first-of-type {
+        flex: 0 0 100%;
+      }
+    }
+
+// Large screens
+    @media (min-width: 48em) {
+      .Grid--cols-2 > .Grid-cell,
+      .Grid--cols-3 > .Grid-cell,
+      .Grid--cols-4 > .Grid-cell,
+      .Grid--cols-6 > .Grid-cell,
+      .Grid--cols-12 > .Grid-cell {
+        flex: 1;
+      }
+
+      .Grid--layout .main {
+        flex: 2;
+      }
+      .Grid--layout .aside {
+        flex: 1;
+      }
+      .Grid--layout .aside-1 {
+        order: 1;
+      }
+      .Grid--layout .main {
+        order: 2;
+      }
+      .Grid--layout .aside-2 {
+        order: 3;
+      }
+
+      .Grid--1of2 > .Grid-cell {
+        flex: 0 0 50%;
+      }
+
+      .Grid--1of6 > .Grid-cell:first-of-type {
+        flex: 0 0 16.6666%;
+      }
+
+      .Grid--1of4 > .Grid-cell:first-of-type {
+        flex: 0 0 25%;
+      }
+
+      .Grid--1of3 > .Grid-cell:first-of-type {
+        flex: 0 0 30%;
+      }
+
+      .Grid--gutters.Grid--nested .Grid-cell:first-of-type .dev {
+        margin-right: 0;
+      }
+    }
+
+//
+// FOR DEVELOPER VISUALIZATION
+// COMMENT OR REMOVE HERE AND
+// DON'T LEAVE IN CODE
+///////////////////////////////
+    .content-1of1::before {
+      content: "FLEX 1";
+    }
+
+    .content-1of2::before {
+      content: "FLEX 1/2";
+    }
+
+    .content-1of3::before {
+      content: "FLEX 1/3";
+    }
+
+    .content-1of4::before {
+      content: "FLEX 1/4";
+    }
+
+    .content-1of6::before {
+      content: "FLEX 1/6";
+    }
+
+    .content-1of12::before {
+      content: "FLEX 1/12";
+    }
+
+    .dev {
+      padding: .8em 1em 0;
+      // margin-bottom: 1em;
+      background: rgba(51, 153, 204, 0.2);
+      transition: background-color 0.3s ease;
+      border: 1px solid #33cccc;
+      border-radius: 3px;
+    }
+    .dev:after {
+      content: "";
+      display: block;
+      margin-top: .8em;
+      height: 1px;
+    }
+    .dev:hover {
+      background: rgba(51, 153, 204, 0.6);
+    }
+
+    .dev.highlight {
+      background: rgba(102, 51, 255, 0.1);
+    }
+    .dev.highlight:hover {
+      background: rgba(102, 51, 255, 0.25);
+    }

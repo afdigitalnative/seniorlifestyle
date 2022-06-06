@@ -1,0 +1,189 @@
+h1{
+    color: white;
+}
+
+h2:not(.guide-title):before{
+    content: "//";
+    position: relative;
+    color: $sl-primary-light;
+    left: -10px;
+}
+
+.btn-primary-navy{
+    width: fit-content !important;
+}
+
+.average-cost{
+    .factors-row{
+        justify-content: space-between !important;
+        .factor-card{
+            max-width: 380px;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.09);
+            .factor-title{
+                color: #762057;
+            }
+        }
+    }
+    .planners-row{
+        justify-content: space-around;
+        .planner-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .planner-content{
+                text-align: left;
+            }
+        }
+    }
+}
+
+.payment-options{
+    background-color: #fff;
+    background-image: url(../../img/pattern/patt_9_yellow.svg);
+    background-repeat: repeat;
+    background-size: 30px auto;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    overflow-x: hidden;
+
+    .img-backdrop{
+        border-radius: 20px;
+        box-shadow: -20px -20px $sl-primary-light, 0px 2px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .left-text, .right-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+}
+
+.cost-guide{
+    background-color: $sl-primary;
+    h2{
+        text-align: center;
+        max-width: 800px;
+        color: white !important;
+        margin: auto;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            color: white !important;
+        }
+    }
+
+    .image, .content{
+        padding: 40px;
+    }
+
+    .decoration{
+        width: 130px;
+        height: auto;
+        position: absolute;
+        transform: rotate(45deg);
+    }
+
+    @media (max-width: 768px){
+        .decoration{
+            display: none;
+        }
+    }
+}
+
+
+.next-steps{
+    .container{
+        max-width: 580px;
+        padding: 20px;
+    }
+    .number{
+        background-color: $sl-primary;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 2rem;
+        height: 42px;
+        margin: 0.8rem;
+        text-align: center;
+        width: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (min-width: 768px){
+        .line-start:after{
+            content: '';
+            width: 0;
+            height: 444px;
+            position: absolute;
+            border: 2px solid $sl-primary-light;
+            top: 30px;
+            left: 46px;
+            z-index: -1;
+        }
+    }
+}
+
+.option-title::after{
+    border-top: 3px solid $sl-primary-light;
+    content: "";
+    margin: 0 2rem;
+    width: 62rem;
+    top: 66px;
+    position: absolute;
+}
+
+.btn-primary-purple{
+    width:fit-content !important;
+}
+
+.btn-primary-white:hover{
+    color: $sl-primary;
+    text-decoration: underline;
+    transition: all ease 0.2s;
+}
+
+.section-find-community{
+    margin: 0 !important;
+}
+
+@media (max-width: 768px){
+    .py-5{
+        padding-bottom: 2rem !important;
+        padding-top: 2rem !important;
+    }
+
+    .py-6{
+        padding-bottom: 2rem !important;
+        padding-top: 2rem !important;
+    }
+
+    .factor-card{
+        box-shadow: unset !important;
+        padding: 2rem 1.6rem !important;
+    }
+
+    .option-restack{
+        flex-direction: column-reverse;
+    }
+
+    .cost-guide{
+        .image{
+            padding: 20px 40px !important;
+        }
+    }
+
+    .payment-options{
+        .pb-5{
+            padding-bottom: 0rem !important;
+        }
+    }
+}

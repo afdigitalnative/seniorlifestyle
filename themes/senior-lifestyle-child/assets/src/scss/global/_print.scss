@@ -1,0 +1,15 @@
+
+@media print {
+    /* your print styles */
+    .raleigh-campaign.Campaign.CampaignType--floating div,
+    .site-header .header-right-column, 
+    #page .site-main .post-nav-wrapper,
+    #page .site-main .social-share-wrapper,
+    aside.sidebar .location-callout-box-basic,
+    aside.sidebar .featured-posts-block,
+    aside.sidebar .categories-block,
+    #page .site-main .call-to-action,
+    footer.primary-footer {
+        display: none;
+    }
+    }

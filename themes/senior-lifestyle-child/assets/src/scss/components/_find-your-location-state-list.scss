@@ -1,0 +1,116 @@
+.find-your-location-state-list {
+    background-color: $sl-light-gray;
+    padding: 6.25rem 0 4rem 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 3rem 0 1.25rem 0;
+    }
+
+    .fyl-link-wrapper {
+        text-align: center;
+    }
+
+    h2 {
+        margin: 0;
+
+        > a {
+            color: #fff;
+            background-color: $sl-primary;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            transition: all 0.2s linear;
+
+            @include media-breakpoint-down(sm) {
+                color: $sl-primary;
+                background-color: unset;
+                padding: unset;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                background-color: lighten($sl-primary, 10%);
+
+                @include media-breakpoint-down(sm) {
+                    background-color: unset;
+                    color: lighten($sl-primary, 10%);
+                }
+
+            }
+
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
+        }
+
+    }
+
+    .state-list-wrapper {
+        margin-top: 2rem;
+        padding: 3rem 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 870px;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0 0;
+        }
+
+        .map-wrapper {
+            position: absolute;
+            top: 2rem;
+            width: 80%;
+            height: 100%;
+            opacity: 0.25;
+            z-index: 0;
+            right: 50%;
+            -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+        }
+
+    }
+
+    .state-list {
+        display: flex;
+        list-style-type: none;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        flex-direction: column;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+        li{
+            list-style: none;
+        }
+        .state {
+            flex-basis: 25%;
+            padding: 0.75rem;
+            margin: 0;
+                .city-list{
+                    padding-left: 20px;
+                }
+                .city{
+                        a{
+                            font-weight: normal;
+                        }
+                }
+            // for Internet Explorer
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                flex-basis: 21%;
+            }
+
+
+            @include media-breakpoint-down(sm) {
+                flex-basis: 50%;
+            }
+
+        }
+
+    }
+
+}

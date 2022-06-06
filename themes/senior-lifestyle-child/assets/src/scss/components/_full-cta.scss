@@ -1,0 +1,31 @@
+.full-cta{
+	background: url(/wp-content/themes/senior-lifestyle-child/assets/img/pattern/patt_7_primary_light.svg) repeat, #177E89;
+	background-size: 30px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	.card-body{
+		display: flex;
+		height: 100% !important;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		.card-title{
+			font-size: 1.875rem;
+		}
+	}
+
+	.card{
+		border: none;
+		border-radius: 1.25rem;
+		background-color: white;
+	}
+	img{
+		border-radius: 0 1.25rem 1.25rem 0;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+}

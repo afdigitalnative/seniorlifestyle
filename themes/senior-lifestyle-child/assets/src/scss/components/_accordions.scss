@@ -1,0 +1,119 @@
+.accordion {
+    .card {
+		border: none;
+		background-color: transparent;
+
+		&:not(.last-of-type) {
+			margin-top: 15px;
+		}		
+
+		.card-header {
+			border: none;
+			border-radius: 6px;
+			background-color: $primary-light;		
+			padding: 5px 5px;
+			
+			&.opened {
+				border-radius: 6px 6px 0 0;
+			}
+					
+			.btn {
+				display: block;
+				width: 100%;
+				color: #fff;
+				text-align: left;
+				position: relative;
+				padding: 8px 35px 8px 13px !important;
+				font-size: 18px;
+				font-weight: 500;
+
+				&:after {
+					display: inline-block;
+					font-style: normal;
+					font-variant: normal;
+					line-height: 1;
+					text-rendering: auto;
+					font-family: Font Awesome\ 5 Pro;
+					content: "\f0d7";
+					position: absolute;
+					right: .75rem;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: 1.125rem;
+					font-weight: 600;
+				}
+
+				&[aria-expanded="true"] {
+					&:after {
+						content: "\f068";
+						font-weight: 300;
+					}
+				}
+				
+				&:hover {
+					outline: none;
+					text-decoration: none;
+				}
+				&:focus, &:active {
+					outline: none;
+					text-decoration: none;
+				}			
+			}
+		}
+	
+		&:not(.last-of-type) {
+			margin-top: 15px;
+		}		
+    }
+
+    .card-body {
+        padding-top: ($spacer * 1.5);
+        padding-bottom: ($spacer * 1.5);
+		padding-left: 35px;
+		padding-right: 35px;
+		background-color: #fff;
+		text-align: left;
+    }
+}
+
+
+
+//FOR FAQ PAGE
+.post-21198 {
+	.accordion {	
+		.card-header {
+			border: none;
+			border-radius: 30px;
+			background-color: $sl-primary;		
+			padding: 5px 5px;
+			transition: ease all 0.3s;
+			&.opened {
+				border-radius: 30px 30px 0 0;
+				transition: ease all 0.3s;
+			}
+		}
+
+		.card-body{
+			background-color: #fff;
+			padding: 1.5rem 35px;
+			border: $sl-primary-light solid 3px;
+			border-top: none !important;
+			border-radius: 0 0 30px 30px;
+		}
+
+		.btn{
+			&:after {
+				transition: ease all 0.3s;
+				content: "\f107" !important;
+			}
+			&[aria-expanded="true"] {
+				&:after {
+					content: "\f107" !important;
+					transform: translateY(-50%) rotateZ(180deg) !important;
+					transition: ease all 0.3s;
+					font-weight: 600 !important;
+				}
+			}
+		}
+	}
+}

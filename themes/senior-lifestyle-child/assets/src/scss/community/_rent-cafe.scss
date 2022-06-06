@@ -1,0 +1,64 @@
+section.rentcafe-section {
+    text-align: center;
+    padding-bottom: 3.75rem;
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 1.875rem;
+    }
+
+    h3 {
+        color: $sl-tertiary;
+        margin: 30px 0 40px 0;
+    }
+
+    img {
+        max-width: 200px;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        min-width: 240px;
+        background-color: $sl-tertiary;
+        border: none;
+
+        &:hover {
+            background-color: darken($sl-tertiary, 10%);
+        }
+
+    }
+
+}
+
+//for sheridan
+body.sheridan section.rentcafe-section {
+    h3 {
+        color: $sh-tertiary;
+    }
+
+    .btn-primary {
+        background-color: $sh-tertiary;
+
+        &:hover {
+            background-color: darken($sh-tertiary, 10%);
+        }
+
+    }
+
+}
+
+//for signature
+body.signature section.rentcafe-section {
+    h3 {
+        color: $si-tertiary;
+    }
+
+    .btn-primary {
+        background-color: $si-tertiary;
+
+        &:hover {
+            background-color: darken($si-tertiary, 10%);
+        }
+
+    }
+
+}

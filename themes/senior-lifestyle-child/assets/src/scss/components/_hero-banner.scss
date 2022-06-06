@@ -1,0 +1,303 @@
+//
+// PAGE TITLE - ABOVE BANNER (SEPARATE IN CASE OF DESIGN CHANGES)
+//
+
+.page-title-wrapper {
+  text-align: center;
+  padding: 0 0 1.875rem 0;
+}
+
+.archive .page-title-wrapper {
+  text-align: left;
+}
+
+// THE DOUBLE SLASH BEFORE TITLES GENERALIZED AS BLUE
+
+@mixin double-slash($slash_color){
+  &:before{
+    color: $slash_color;
+    content: "//";
+    font-size: 3.5rem;
+    left: -50px;
+    position: absolute;
+    top: 20px;
+    letter-spacing: -10px;
+  }
+}
+
+//Different colors; follow this method to add a new one.
+.double-slash-blue {
+  @include double-slash(#177e89);
+}
+
+.double-slash-red{
+  @include double-slash(#89171d);
+}
+
+.double-slash-yellow{
+  @include double-slash(#c9ad0e);
+}
+
+.double-slash-purple{
+  @include double-slash(#321a86);
+}
+
+//DOUBLE SLASH ENDS
+
+//
+// HERO/BANNER AREA
+//
+.banner-area {
+  .banner-content-wrapper {
+    max-width: 1000px;
+    margin: 50px auto;
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 36px;
+    }
+  }
+}
+
+section.hero-section {
+  .mobile-only {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .mobile-only {
+      display: block;
+    }
+
+    .mobile-hide {
+      display: none;
+    }
+
+    .header-wrap.mobile-only {
+      display: block;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding: 20%;
+    }
+  }
+
+  .hero-panel-container {
+    > .container {
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+      }
+    }
+
+    .hero-panel {
+      @include media-breakpoint-down(sm) {
+        box-shadow: 0px 3px 20px 0 rgba(0, 0, 0, 0);
+        padding: 2.25rem 0 0 0;
+      }
+    }
+
+    h1 > span {
+      line-height: 1;
+
+      @include media-breakpoint-down(sm) {
+        line-height: 1.2;
+      }
+    }
+
+    .btn-purple {
+      span {
+        padding-right: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        & {
+          margin-top: 1rem;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .announcement-banner {
+    z-index: 0;
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		left: -1200px;
+		width: 100%;
+		min-height: 450px;
+		background: rgba($sl-primary-light, 0.75);
+		-webkit-animation: slide 1s forwards;
+		-webkit-animation-delay: 1s;
+		animation: slide 1s forwards;
+		animation-delay: 1s;
+		transform: skewX(165deg);
+	}
+
+    @-webkit-keyframes slide {
+      100% {
+        left: 110px;
+      }
+    }
+
+    @keyframes slide {
+      100% {
+        left: 110px;
+      }
+    }
+
+    .announcement {
+      background-color: #762057;
+      color: $sl-white;
+	  font-size: 25px;
+	  line-height: 35px;
+	  max-width: 350px;
+	  padding: 15px 30px;
+	/*
+      max-width: 250px;
+      max-height: 100px;
+	  */
+      -webkit-animation: fillright 1s forwards;
+      -webkit-animation-delay: 2s;
+      animation: fillright 1s forwards;
+      animation-delay: 2s;
+	  /*
+      position: absolute;
+      left: -600;
+	  */
+		transform: scaleX(0);
+		transform-origin: left;	  
+      @-webkit-keyframes fillright {
+        100% {
+			transform: scaleX(1);
+			transform-origin: left;
+        }
+      }
+  
+      @keyframes fillright {
+        100% {
+			transform: scaleX(1);
+			transform-origin: left;        
+		}
+      }
+
+	  span {
+			font-family: $font-noto;
+			opacity: 0;
+		  -webkit-animation: fadeIn 0.5s forwards;
+		  -webkit-animation-delay: 3.5s;
+		  animation: fadeIn 0.5s forwards;
+		  animation-delay: 3.5s;
+		  
+		  @-webkit-keyframes fadeIn {
+			100% {
+				opacity: 1;        
+			}
+		  }
+	  
+		  @keyframes fadeIn {
+			100% {
+				opacity: 1;        
+			}
+		  }		
+	  }
+	  
+	  img {
+	    position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		  -webkit-animation: scaleUp 0.5s forwards;
+		  -webkit-animation-delay: 4s;
+		  animation: scaleUp 0.5s forwards;
+		  animation-delay: 4s;
+		  transform: scale(0); 
+		  
+		  @-webkit-keyframes scaleUp {
+			100% {
+				transform: scale(1);        
+			}
+		  }
+	  
+		  @keyframes scaleUp {
+			100% {
+				transform: scale(1);         
+			}
+		  }	
+		  
+		&:first-of-type {
+		  top: -15px;
+		  transform-origin: bottom;
+		}
+		
+		&:last-of-type {
+		  bottom: -15px;
+		  transform-origin: top;
+		}
+	  }
+    }
+  }
+}
+
+//
+// TEXT BANNER AREA
+//
+
+.text-banner {
+  .text-banner-wrapper {
+    padding: 40px 60px;
+    background-color: $sl-light-gray;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+  }
+}
+
+// CALL OUT OVERLAY
+
+.call-out-overlay {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(11, 67, 106, 0.9);
+  padding: 25px;
+  max-width: 550px;
+
+  @include media-breakpoint-down(sm) {
+    position: unset;
+    max-width: 100%;
+  }
+}
+
+.call-out-container {
+  position: relative;
+}
+
+.call-out-container .call-out-overlay {
+  p,
+  h2,
+  h3,
+  h4,
+  strong {
+    color: white;
+  }
+}

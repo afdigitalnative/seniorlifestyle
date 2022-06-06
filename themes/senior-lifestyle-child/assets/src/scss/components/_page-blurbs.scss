@@ -1,0 +1,81 @@
+// page-blurbs
+//////////////////////////////////
+
+.about-page .page-blurbs:first-child {
+    border-top: 0;
+}
+
+.loc-page .page-blurbs:first-child {
+    border-top: 0;
+}
+
+.page-blurbs {
+    padding: 60px 0.9375rem 0 0.9375rem;
+    border-top: 1px solid $sl-borderline;
+    max-width: 1000px;
+
+    &:first-child {
+        margin-top: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 2.5rem 1rem 0 1rem;
+        // background-color: red;
+    }
+
+    .content-wrapper {
+        max-width: 1000px !important;
+        margin: 0 auto;
+
+        // for Internet Explorer
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            min-width: 1000px;
+        }
+
+    }
+
+    .content-container {
+        padding-left: 1.875rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+
+            .btn-primary-navy {
+                width: 100%;
+                text-align: center;
+                margin-top: 1.25rem;
+            }
+
+        }
+
+    }
+
+    .title {
+        color: $sl-primary;
+    }
+
+    a {
+        color: $sl-primary;
+
+        &:hover {
+            color: $sl-primary-dark;
+        }
+
+    }
+
+    a.btn-primary-navy {
+        color: $sl-white;
+    }
+
+    img {
+        margin: 0 1.875rem 0 0;
+        max-width: 320px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 1.25rem 0;
+            max-width: 100%;
+        }
+
+    }
+
+}

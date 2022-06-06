@@ -1,0 +1,26 @@
+.horizontal-card{
+    background-color: $sl-primary;
+    border-radius: 25px !important;
+    margin: auto;
+
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%
+    }
+
+    .card-title, .card-body{
+        color: white !important;
+    }
+
+    .card-img{
+        border-radius: 0 0 25px 25px;
+    }
+
+    @media (min-width: 768px) {
+        .card-img{
+            border-radius: 0 25px 25px 0;
+        }
+    }
+}

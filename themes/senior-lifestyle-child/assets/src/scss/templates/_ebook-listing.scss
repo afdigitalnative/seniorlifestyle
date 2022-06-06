@@ -1,0 +1,333 @@
+#primary.ebook-hub {
+	.section-ebook-hub-hero {
+		padding: 50px 0;
+		background-color: $primary;
+		
+		h1 {
+			margin-bottom: 20px;
+			font-weight: bold;
+			color: #fff;
+		}
+		
+		p {
+			color: #fff;
+		}
+		
+		.row {
+			align-items: center;
+			
+			.col-md-7 {
+				@include media-breakpoint-up(sm) {
+					padding-right: 50px;
+				}
+			}
+		}
+		
+		.col-links {
+			position: relative;
+			padding: 35px 30px;
+			
+			@include media-breakpoint-down(sm) {
+				padding: 30px 30px;
+			}
+			
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0px;
+				width: calc(50vw - 113px);
+				height: 100%;
+				background-color: $primary-light;
+				border-radius: 15px 0 0 15px;
+				
+				@media screen and (max-width: 1240px) {
+					width: 100%;
+				}
+				
+				@include media-breakpoint-down(sm) {
+					width: calc(100% - 30px);
+					left: 15px;
+					border-radius: 0;
+				}
+			}
+			
+			.links-label {
+				position: relative;
+				display: flex;
+				align-items: center;
+				margin-bottom: 25px;
+				width: calc(50vw - 143px);
+				font-size: 22px;
+				font-weight: bold;				
+				line-height: 25px;
+				color: #fff;
+				
+				@include media-breakpoint-down(sm) {
+					width: auto;
+				}
+				&:after {
+					content: "";
+					width: auto;
+					height: 2px;
+					flex-grow: 1;
+					margin-left: 20px;
+					background-color: #fff;
+					
+					@include media-breakpoint-down(sm) {
+						margin-right: -15px;
+					}
+				}
+			}
+			
+			ul {
+				position: relative;
+				padding-left: 5px;
+				list-style: none;
+				
+				li {
+					display: flex;
+					margin-bottom: 18px;
+					
+					&:before {
+						content: "";
+						width: 15px;
+						height: 2px;
+						background-color: $primary-yellow;
+						margin-right: 10px;
+						margin-top: 10px;
+					}
+					
+					a {
+						color: #fff;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	
+	.section-ebook-listing {
+		padding-top: 80px;
+		
+		@include media-breakpoint-down(sm) {
+			padding-top: 40px;
+		}
+		
+		.row {
+			align-items: center;
+			padding-bottom: 90px;
+			
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 30px;
+			}
+			
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+			
+			.col-image {
+				position: relative;
+				padding-right: 40px;
+			
+				.wrap-image {
+					position: relative;
+					padding: 30px 40px;
+					border-radius: 15px;
+					background-color: $primary;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-height: 430px;
+					
+					&:before {
+						content: "";
+						position: absolute;
+						left: -18px;
+						bottom: -18px;
+						width: 100%;
+						height: 100%;
+						border-radius: 15px;
+						background-color: $primary-light;
+						z-index: -1;
+						
+						@include media-breakpoint-down(sm) {
+							bottom: -12px;
+							left: -12px;
+						}
+					}
+					
+					@include media-breakpoint-down(sm) {
+						min-height: unset;
+						padding: 20px;
+					}
+				}
+				
+				@media screen and (max-width: 1250px) {
+					padding-left: 40px;
+				}
+				
+				@include media-breakpoint-down(sm) {
+					padding-right: 30px;
+					
+					&:before {
+						content: "";
+						position: absolute;
+						top: 40px;
+						right: 0px;
+						width: 30px;
+						height: 3px;
+						z-index: -1;						
+					}
+				}
+			}
+			
+			.col-content {
+				position: relative;
+				padding-left: 40px;
+				
+				&:before {
+					content: "";
+					position: absolute;
+					top: -20px;
+					left: -40px;
+					width: calc(50vw + 238px);
+					height: 3px;
+					z-index: -1;
+					
+					@media screen and (max-width: 1250px) {
+						width: calc(100% + 40px);
+					}
+					
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+				}
+				
+				@include media-breakpoint-down(sm) {
+					padding: 35px 30px 0 !important;
+				}
+			}
+			
+			.btn-small {
+				padding: 15.5px 35px !important;
+			}
+			
+			&.content-left {
+				flex-direction: row-reverse;
+				
+				.col-image {
+					padding-left: 40px;
+					padding-right: 15px;
+					
+					.wrap-image:before {
+						left: unset;
+						right: -18px;
+						
+						@include media-breakpoint-down(sm) {
+							right: -12px;
+						}
+					}
+					
+					@media screen and (max-width: 1250px) {
+						padding-right: 40px;
+						padding-left: 15px;
+					}
+					
+					@include media-breakpoint-down(sm) {
+						padding-left: 30px;
+						
+						&:before {
+							left: 0;
+							right: unset;
+						}
+					}
+				}
+				
+				.col-content {
+					padding-right: 40px;
+					padding-left: 15px;
+					
+					&:before {
+						left: unset;
+						right: -40px;
+					}
+				}				
+			}
+			
+			&:first-child {
+				.col-image:before {
+					content: "";
+					position: absolute;
+					top: -80px;
+					left: calc(50% - 10px);
+					width: 3px;
+					height: 80px;
+					background-color: $primary-yellow;
+					z-index: -1;
+					
+					@include media-breakpoint-down(md) {
+						left: 80px;
+					}
+					
+				}
+				
+				.col-content:before {
+					display: none;
+				}
+			}
+			&:nth-of-type(2) {
+				.col-image .wrap-image:before {
+					background-color: $primary-light !important;
+				}				
+			}			
+			&:nth-of-type(4n + 2) {
+				.col-content:before {
+					background-color: $primary-yellow;
+				}
+				.col-image .wrap-image:before {
+					background-color: $primary-yellow;
+				}
+				.col-image:before {
+					background-color: $primary-yellow;
+				}				
+			}
+			
+			&:nth-of-type(4n + 3) {
+				.col-content:before {
+					background-color: $primary;
+				}
+				.col-image .wrap-image:before {
+					background-color: $primary-light;
+				}
+				.col-image:before {
+					background-color: $primary-light;
+				}				
+			}
+
+			&:nth-of-type(4n + 4) {
+				.col-content:before {
+					background-color: $loc-red;
+				}
+				.col-image .wrap-image:before {
+					background-color: $loc-red;
+				}	
+				.col-image:before {
+					background-color: $loc-red;
+				}				
+			}
+
+			&:nth-of-type(4n + 5) {
+				.col-content:before {
+					background-color: $primary-purple;
+				}
+				.col-image .wrap-image:before {
+					background-color: $primary-purple;
+				}
+				.col-image:before {
+					background-color: $primary-purple;
+				}				
+			}	
+		}
+	}
+}

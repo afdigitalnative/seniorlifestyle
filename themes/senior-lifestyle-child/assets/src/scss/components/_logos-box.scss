@@ -1,0 +1,30 @@
+// logos box, (shortcoded)
+    .logo-wrapper {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 30px;
+
+        .Grid {
+            align-items: center;
+        }
+
+        .Grid-cell {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            .Grid--cols-4>.Grid-cell {
+                flex: 50%;
+            }
+
+            .Grid-cell {
+                margin-bottom: 1.875rem;
+            }
+
+            .Grid-cell:nth-last-of-type(-n+2) {
+                margin-bottom: 0;
+            }
+
+        }
+
+    }

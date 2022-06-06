@@ -1,0 +1,32 @@
+main{
+    padding-bottom: 0 !important;
+}
+
+.text-white > *{
+    color: white;
+}
+
+h3:before{
+    color: #177e89;
+    content: "//";
+    font-size: 3.5rem;
+    left: -1rem;
+    position: relative;
+    letter-spacing: -5px;
+}
+
+.entry-title{
+    text-align: left;
+}
+
+.entry-title:before{
+    color: #177e89;
+    content: "//";
+    font-size: 3.5rem;
+    left: -1rem;
+    position: relative;
+    letter-spacing: -5px;
+    @include media-breakpoint-down(sm){
+        display: none !important;
+    }
+}

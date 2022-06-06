@@ -1,0 +1,59 @@
+@mixin community_style($theme, $color-line) {
+	body.#{$theme} {
+		section.announcement-section {
+		  position: relative;
+		  padding: 3rem 0;
+		  z-index: 10;
+
+		  h2 {
+			text-align: center;
+			padding-bottom: 2rem;
+		  }
+
+		  .announcement-row {
+		    position: relative;
+			align-items: center;
+			background-color: $sl-white;
+			padding: 2rem 1rem 2rem 1.6rem;
+			margin: 0;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 15px;
+				width: 2px;
+				height: calc(100% - 36px);
+				margin: auto;
+				background-color: $color-line;
+			}
+
+			.announcement-title {
+			  position: relative;
+			  h3 {
+				color: $sl-primary;
+			  }
+			  
+			  p:last-of-type {
+				margin-bottom: 0;
+			  }
+			}
+		  }
+		}
+	}
+}
+
+@include community_style(
+	slc, 
+	$sl-red
+);
+@include community_style(
+	signature, 
+	$si-primary-light
+);
+@include community_style(
+	sheridan,
+	$sl-red
+);
+

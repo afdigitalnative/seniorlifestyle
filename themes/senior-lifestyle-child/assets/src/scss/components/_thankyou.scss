@@ -1,0 +1,33 @@
+//
+// THANKYOU PAGE TEMPLATE
+//
+
+.thankyou {
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    height: 400px;
+    max-width: 1000px !important;
+
+    h3 {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.2;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+        }
+
+    }
+
+    .btn-primary-navy {
+        margin: 60px auto;
+
+        @include media-breakpoint-down(sm) {
+            margin: 30px auto;
+        }
+
+    }
+
+}

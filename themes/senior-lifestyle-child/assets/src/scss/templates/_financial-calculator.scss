@@ -1,0 +1,309 @@
+// Finacial Calculator
+.entry-title {
+    text-align: left;
+}
+
+#select-property {
+    display: none;
+}
+
+#select-property-cities {
+    display: none;
+    padding: 5px 90px 5px 10px !important;
+}
+
+
+.calculator-content-container {
+    max-width: 100%;
+    margin: 3.125rem auto;
+    margin-bottom: 0.9375rem;
+
+    a {
+        color: $sl-secondary;
+
+        &:hover {
+            color: $sl-secondary-dark;
+        }
+
+    }
+
+}
+
+.calc-calculator-wrapper {
+    max-width: 100%;
+    margin: 3.125rem auto;
+    margin-bottom: 0.9375rem;
+    overflow: auto;
+    border-radius: 15px;
+
+    input, select {
+        padding: 6px 10px;
+        border: 1px solid $sl-borderline;
+        border-radius: 4px;
+    }
+
+    input {
+        width: 120px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    // tooltip button (?)
+    .tooltip {
+        background-color: $sl-primary;
+        height: 26px;
+        text-align: center;
+        width: 26px;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        opacity: 1 !important;
+    }
+
+    // tooltip box and text
+    .tooltip .tooltiptext {
+        background-color: $sl-extra-light-gray;
+        border-radius: 1px;
+        border: 1px solid $sl-borderline;
+        color: #3f3f3f;
+        font-weight: normal;
+        left: 40px;
+        padding: 5px 0;
+        position: absolute;
+        text-align: center;
+        top: -30px;
+        visibility: hidden;
+        width: 220px;
+        z-index: 1;
+        -webkit-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.05);
+        box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.05);
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    #budget-calculator {
+        width: 100%;
+
+        thead {
+            background-color: $sl-primary;
+            border-collapse: collapse;
+            border: 0px;
+            color: $sl-white;
+            font-size: 21px;
+            font-weight: bold;
+
+            th {
+                padding: 16px 20px;
+            }
+
+        }
+
+        tbody tr td {
+            padding: 6px 10px;
+            border-bottom: 1px solid $sl-borderline;
+            border-collapse: collapse;
+            padding: 10px 20px;
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            &:last-child {
+                background-color: rgba(233, 235, 235, .3);
+            }
+
+            &.pad-left {
+                padding-left: 25px;
+            }
+
+        }
+
+        .calc-total {
+            background-color: $sl-borderline;
+            border-collapse: collapse;
+            border: 0px;
+            color: $sl-primary;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 60px;
+
+            .pad-left {
+                background-color: $sl-tertiary;
+                color: $sl-white;
+            }
+
+        }
+
+    }
+
+}
+
+#monthly-present, #monthly-sls {
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+#monthly-sls{
+    background-color: $sl-primary !important;
+}
+
+@include media-breakpoint-down(sm) {
+    .calc-calculator-wrapper {
+        select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+        }
+
+        #budget-calculator {
+            border-bottom: 1px solid $sl-borderline;
+            min-width: 100%;
+
+            tbody tr td, #budget-calculator thead tr th {
+                padding: 10px 30px;
+                text-align: right;
+                border-bottom: 0px;
+
+                &.pad-left {
+                    padding-left: 10px;
+                }
+
+            }
+
+        }
+
+        input[type="number"], textarea {
+            width: 30%;
+            text-align: right;
+            float: right;
+            margin-top: -7px;
+        }
+
+        table {
+            width: 100%
+        }
+
+        thead {
+            display: none;
+        }
+
+        th {
+            &.monthly-expenses {
+                width: 100%;
+                text-align: left;
+                font-weight: 600;
+                background-color: $sl-primary;
+            }
+
+            &.monthly-present, &.monthly-sls {
+                width: 100%;
+            }
+
+        }
+
+        td {
+            text-align: right;
+            display: block;
+
+            &.monthly-expenses {
+                width: 100%;
+                text-align: left;
+                font-weight: 600;
+                background-color: $sl-primary;
+                color: $sl-white;
+
+                .tooltip {
+                    display: none;
+                }
+
+            }
+
+            &.monthly-present, &.monthly-sls {
+                width: 100%;
+            }
+
+        }
+
+        td:after {
+            float: left;
+            content: attr(data-title);
+        }
+
+    }
+
+}
+
+#container-options {
+    background-color: $sl-tertiary;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 30px 20px;
+
+    h2 {
+        border: 0px;
+        color: $sl-white;
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        letter-spacing: 0.25px;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: $sl-white url('../../img/angle-arrow-down.svg') no-repeat 95% center;
+        background-size: contain;
+        width: auto; /*Width of select dropdown to give space for arrow image*/
+        text-indent: 0.01px; /* Removes default arrow from firefox*/
+        text-overflow: "";  /*Removes default arrow from firefox*/
+        color: $sl-black;
+        border-radius: 2px;
+        border: 1px solid $sl-borderline;
+        padding: 5px 10px;
+        padding-right: 30px;
+
+        &.sl-select {
+            background-color: $sl-white;
+            margin-right: 10px;
+            padding-right: 60px;
+        }
+
+    }
+
+}
+
+.horizontal-card{
+    p{
+        color:white;
+    }
+
+    .text-box{
+        padding: 40px;
+    }
+
+    .img-box{
+        border-radius: 0 0 25px 25px;
+        background-color: white;
+    }
+
+    @media (min-width: 768px) {
+        .img-box{
+            border-radius: 0 25px 25px 0;
+        }
+    }
+
+}

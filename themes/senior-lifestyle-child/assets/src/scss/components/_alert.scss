@@ -1,0 +1,17 @@
+// Alert banner
+
+.alert-banner {
+    padding: 60px 80px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    &.alert-info {
+        background: #0b436a;
+        
+        h2 {
+            color: white;
+        }
+    }
+}

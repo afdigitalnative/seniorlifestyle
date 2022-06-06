@@ -1,0 +1,145 @@
+//
+// Find a Community
+//
+
+.section-find-community {
+	position: relative;
+	padding: 50px 30px;
+	background-color: $primary-light;
+	margin-top: 100px;
+	
+	@include media-breakpoint-down(sm) {
+		margin-top: 50px;
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(./assets/img/pattern/patt_8_white.svg);
+		background-repeat: repeat;
+		background-size: 45px auto;
+		opacity: 0.2;
+		z-index: 0;		
+	}
+	
+	.row {
+		border-radius: 20px;
+		background-color: #fff;
+		
+		.col-form {
+			display: flex;
+			align-items: center;
+			padding: 35px;
+			
+			.form-row {
+				label {
+					margin-bottom: 5px;
+					font-size: 16px;
+				}
+				input, select {
+					height: 45px;
+					border-radius: 0;
+					box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.3);
+					border: 1px solid #999;
+				}
+				select {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;				
+					background-image: url(./assets/img/select-arrow.png);
+					background-size: 13px auto;
+					background-position-x: calc(100% - 15px);
+					background-position-y: center;
+					background-repeat: no-repeat;
+					padding-right: 30px;					
+				}
+				button {
+					margin-top: 20px;
+					padding: 14px 35px;
+					
+					@include media-breakpoint-down(sm) {
+						width: 100%;
+						max-width: 300px;
+					}
+				}
+				
+				@include media-breakpoint-down(sm) {
+					.col-auto {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.col-image {
+			flex: 0 0 30%;
+			background-image: url('./assets/img/call-to-banner.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 0px 20px 20px 0px;
+			
+			@include media-breakpoint-down(sm) {
+				flex: 0 0 100%;
+				height: 300px;
+				border-radius: 0 0 20px 20px;
+			}
+		}
+	}
+	
+	&.style-alt {
+		margin-top: 0;
+		padding: 10px 30px 20px;
+		
+		&:before {
+			display: none;
+		}
+		
+		.row {
+			background-color: transparent;
+			color: #fff;
+			
+			h3, p {
+				color: #fff;
+			}
+			
+			.col-form {
+				justify-content: center;
+				text-align: center;
+				
+				@include media-breakpoint-down(sm) {
+					text-align: left;
+					padding: 15px 0;
+				}
+				
+				.form-row {
+					justify-content: center;
+					margin-top: 30px;
+					
+					.col-auto {
+						padding: 0 15px;
+						text-align: left;
+						
+						@include media-breakpoint-down(sm) {
+							padding: 0 5px;
+							
+							label {
+								margin-bottom: 0;
+								font-style: italic;
+							}
+						}
+					}
+					
+					@include media-breakpoint-up(sm) {
+						input, select {
+							min-width: 290px;
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+

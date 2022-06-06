@@ -1,0 +1,101 @@
+
+// Styles for the social share buttons.
+.social-box {
+    display: block;
+    margin: -20px 0 40px;
+    padding: 0;
+
+    &:last-of-type {
+        margin: 0 0 40px;
+    }
+
+}
+
+.social-btn {
+    display: block;
+    width: 100%;
+	
+	a {
+		&.col-2.sbtn span {
+			display: none;
+		}
+
+		&.col-2.sbtn {
+			border-radius: 50%;
+			color: #fff !important;
+			display: inline-block;
+			width: 45px;
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			max-width: unset;
+			text-decoration: none !important;
+			margin-right: 1rem !important;
+			
+			&:last-of-type {
+				margin-right: 0 !important;
+			}
+		}	
+
+	}	
+}
+
+.s-twitter {
+    background: #03A9F4;
+
+    &::before {
+        font-family: 'Font Awesome 5 Brands';
+        content: '\f099';
+    }
+
+    &:hover {
+        background: #0093d6;
+    }
+
+}
+
+.s-facebook {
+    background: #3F51B5;
+
+    &::before {
+        font-family: 'Font Awesome 5 Brands';
+        content: '\f39e';
+    }
+
+}
+
+a.col-2.sbtn.s-facebook:hover {
+    background: #2f409f;
+}
+
+.s-linkedin {
+    background: #1a7baa;
+
+    &::before {
+        font-family: 'Font Awesome 5 Brands';
+        content: '\f0e1';
+    }
+
+}
+
+a.col-2.sbtn.s-linkedin:hover {
+    background: #136288;
+}
+
+.s-pinterest {
+    background: #bd081c;
+
+    &::before {
+        font-family: 'Font Awesome 5 Brands';
+        content: '\f231';
+    }
+
+}
+
+a.col-2.sbtn.s-pinterest:hover {
+    background: #a10718;
+}
+
+.social-btn a:last-of-type {
+    margin: 0;
+}

@@ -1,0 +1,106 @@
+//
+// CONTACT FORM
+//
+main{
+    padding-bottom: 0 !important;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $sl-gray;
+}
+
+.sl-contactform {
+    margin-bottom: 50px;
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-family: "Gotham", "Arial", "Helvetica", sans-serif;
+        font-weight: 500;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        color: $sl-primary;
+    }
+
+    input, select, textarea {
+        padding: 6px 10px;
+        border: 3px solid $sl-borderline;
+        border-radius: 4px;
+        width: 280px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
+    }
+
+    // copied btn-purple-primary
+    input[type=submit] {
+        display: block;
+        background-color: $sl-primary;
+        // border: 1px solid $sl-purple;
+        color: $sl-white;
+        font-weight: 500;
+        line-height: 1.25rem;
+        padding: 0.75rem 1.25rem;
+        text-align: left;
+        transition: all 0.2s linear;
+        border-radius: 1.25rem;
+        width: auto;
+        display: inline-block;
+        -webkit-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.12);
+        box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0.12);
+
+        &:hover {
+            color: $sl-white;
+            background-color: darken($sl-purple, 10%);
+            text-decoration: none;
+            -webkit-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0);
+            -moz-box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0);
+            box-shadow: 10px 15px 9px -10px rgba(0, 0, 0, 0);
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+        }
+
+    }
+
+    textarea {
+        min-width: 520px;
+
+        @include media-breakpoint-down(sm) {
+            min-width: 100%;
+        }
+
+    }
+
+}
+
+#wpcf7-f17843-p2042-o1 div.wpcf7-validation-errors, #wpcf7-f17843-p2042-o1 div.wpcf7-acceptance-missing {
+    border: 0px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#wpcf7-f17843-p2042-o1 div.wpcf7-spam-blocked {
+    border: 0px;
+    font-weight: bold;
+    color: #ffa500;
+}
+
+#wpcf7-f17843-p2042-o1 div.wpcf7-mail-sent-ok {
+    border: 0px;
+    font-weight: bold;
+    color: #398f14;
+}

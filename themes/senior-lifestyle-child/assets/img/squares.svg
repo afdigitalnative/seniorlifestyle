@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="201px" height="201px" viewBox="0 0 201 201" version="1.1" stroke="#DB3A34" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="squares" transform="matrix(0.70710677 0.70710677 -0.70710677 0.70710677 100.72046 1.4141846)" opacity="0.6390826">
+    <path d="M0 57L57 57L57 0L0 0L0 57Z" transform="matrix(0.9999999 0 0 0.9999999 0 83.43872)" id="Stroke-1" fill="none" fill-rule="evenodd" stroke-width="2" />
+    <path d="M0 57L57 57L57 0L0 0L0 57Z" transform="matrix(0.9999999 0 0 0.9999999 82.02319 83.44043)" id="Stroke-3" fill="none" fill-rule="evenodd" stroke-width="2" />
+    <path d="M0 57L57 57L57 0L0 0L0 57Z" transform="matrix(0.9999999 0 0 0.9999999 0.7128906 0.7088623)" id="Stroke-4" fill="none" fill-rule="evenodd" stroke-width="2" />
+    <path d="M0 58L57 58L57 0L0 0L0 58Z" transform="matrix(0.9999999 0 0 0.9999999 42.072266 41.57776)" id="Stroke-6" fill="none" fill-rule="evenodd" stroke-width="2" />
+    <path d="M0 57L57 57L57 0L0 0L0 57Z" transform="matrix(0.9999999 0 0 0.9999999 82.025635 0)" id="Stroke-7" fill="none" fill-rule="evenodd" stroke-width="2" />
+  </g>
+</svg>

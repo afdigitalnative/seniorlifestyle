@@ -1,0 +1,225 @@
+#primary.single-ebook {
+	.section-title-with-line {
+		@include media-breakpoint-down(sm) {
+			padding-left: 30px;
+			margin-bottom: 10px;
+			
+			~ p {
+				padding: 0 10px;
+			}
+		}
+		h2, .h2 {
+			&:before, &:after {
+				background-color: $primary-yellow;
+			}
+			@include media-breakpoint-down(sm) {
+				&:before {
+					display: block;
+					height: 35px;
+					left: 8px;
+					top: 8px;
+				}
+				&:after {
+					display: block;
+					height: 35px;
+					left: 16px;
+					top: 8px;
+				}					
+			}
+		}
+	}
+	
+	.section-form {
+		padding-top: 70px;
+		
+		@include media-breakpoint-down(sm) {
+			margin-top: 30px;
+		}
+		
+		.col-image {
+			padding-top: 80px;
+			padding-bottom: 60px;
+			padding-right: 80px;
+			position: relative;
+			height: fit-content;
+			text-align: right;
+			
+			@include media-breakpoint-down(sm) {
+			    padding-bottom: 25px;
+				padding-right: 25px;
+				padding-top: 50px;
+			}
+			
+			.clip-back {
+				position: absolute;
+				top: 0;
+				right: 80px;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				
+				@include media-breakpoint-down(sm) {
+					right: 0;
+				}
+				
+				&:before {
+					content: "";			
+					background-color: $primary;
+					background-image: url(./assets/img/pattern/patt_7_white.svg);
+					background-repeat: repeat;
+					background-size: 45px auto;
+					clip-path: url(#round-clip-path);
+					display: block;
+					height: 100%;
+					right: 100px;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					opacity: 0.1;
+				}
+				&:after {
+					content: "";
+					background: $primary;
+					clip-path: url(#round-clip-path);
+					display: block;
+					height: 100%;
+					right: 100px;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: -1;
+				}				
+			}
+			
+			&:before {
+				content: "";			
+				background-color: $primary;
+				background-image: url(./assets/img/pattern/patt_7_white.svg);
+				background-repeat: repeat;
+				background-size: 45px auto;
+				display: block;
+				height: 100%;
+				right: 480px;
+				position: absolute;
+				top: 0;
+				width: calc(50vw - 480px);
+				opacity: 0.1;
+			}
+			&:after {
+				content: "";
+				background: $primary;
+				display: block;
+				height: 100%;
+				right: 480px;
+				position: absolute;
+				top: 0;
+				width: calc(50vw - 480px);
+				z-index: -1;
+			}
+			
+			
+			svg {
+				width: 0;
+				height: 0;
+				margin: 0;
+				padding: 0;
+			}
+			img {
+				position: relative;
+			}
+			
+			.wrap-image {
+				position: relative;
+				
+				&:before {
+					content: "";
+					position: absolute;
+					right: -40px;
+					top: 50%;
+					width: 40px;
+					height: 2px;
+					background-color: $primary-yellow;
+					z-index: -1;
+				}
+				
+				&:after {
+					content: "";
+					position: absolute;
+					right: -40px;
+					top: 50%;
+					width: 2px;
+					height: 100vh;
+					background-color: $primary-yellow;
+					z-index: -1;
+				}	
+
+				@include media-breakpoint-down(sm) {
+					&:before, &:after {
+						display: none;
+					}
+				}
+			}
+		}
+		.col-content {
+			padding-left: 50px;
+			
+			@include media-breakpoint-down(sm) {
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-top: 30px;
+			}
+			
+			h4 {
+				margin-top: 50px;
+			}
+			.wrap-form {
+				padding: 15px 0 50px;
+				max-width: 430px;
+			}
+		}
+	}
+	
+	.section-description {
+		position: relative;
+		padding: 80px 30px;
+		background-color: $primary-light;
+		
+		@include media-breakpoint-down(sm) {
+			padding: 25px;
+		}
+		
+		&:before {
+			background-image: url(./assets/img/pattern/patt_7_white.svg);
+			background-repeat: repeat;
+			background-size: 45px auto;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;	
+			opacity: 0.07;
+		}
+		
+		.container {
+			max-width: 1060px !important;
+			padding: 50px 100px;
+			background-color: #fff;
+			border-radius: 15px;
+			
+			@include media-breakpoint-down(sm) {
+				padding: 20px;
+			}
+		}
+		
+		ul {
+			columns: 2;
+			column-gap: 100px;
+			
+			@include media-breakpoint-down(sm) {
+				columns: 1;
+			}
+		}
+	}
+}

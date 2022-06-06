@@ -1,0 +1,122 @@
+/*!
+Theme Name: Senior Lifestyle Child
+Theme URI: https://seniorlifestyle.com
+Author: Widely Interactive
+Author URI: https://widelyinteractive.com
+Description: Child Theme for Senior Lifestyle
+Template: senior-lifestyle
+Version: 1.0.11
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: senior-lifestyle-child
+
+** Developer Note: The production styleheet(s) are located in `./assets/css`. The above is used for header purpooses only. **
+
+*/
+
+//
+// VARIABLES - GLOBAL & BOOTSTRAP
+//
+////////////////////////////
+
+@import "global/variables";
+@import "global/bootstrap-vars";
+@import "global/flexgbox-grid";
+
+//
+// MIXINS
+//
+////////////////////////////
+
+@import "global/mixins";
+
+//
+// VENDOR -> FONTAWESOME
+//
+////////////////////////////
+
+//@import "vendor/fontawesome/scss/fontawesome.scss";
+@import "vendor/font-awesome-pro-master/css/all";
+@import 'vendor/slick-slider/slick';
+@import 'vendor/slick-slider/slick-theme';
+
+//
+// VENDOR -> BOOTSTRAP ( node_modules )
+//
+////////////////////////////
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/close";
+@import "../../../node_modules/bootstrap/scss/modal";
+
+/*!
+Senior Lifestyle Child Theme Styles
+*/
+
+//
+// FONTS & TYPE
+//
+////////////////////////////
+
+@import "global/fonts";
+@import "global/typography";
+
+//
+// LAYOUT
+//
+////////////////////////////
+
+@import "global/layout";
+@import "global/buttons";
+@import "global/backgrounds";
+
+//
+// COMPONENTS (Should be included in style.scss => style.css
+//
+////////////////////////////
+
+@import "components/primary-header";
+@import "components/in-page-nav";
+@import "components/hero-banner";
+@import "components/sidebars";
+@import "components/primary-footer";
+@import "components/call-to-action";
+@import "components/blog-pages";
+@import "components/page-blurbs";
+@import "components/lifestyle-activities";
+@import "components/sl-sections-content";
+@import "components/testimonials";
+@import "components/thankyou";
+@import "components/logos-box";
+@import "components/staff-leadership";
+@import "components/pagination";
+@import "components/contact-form";
+@import "components/hubspot";
+@import "components/alert";
+@import "components/accordions";
+@import "components/heading";
+@import "components/find-community";
+@import "components/full-cta";
+@import "components/horizontal-card";
+
+//
+// PAGE
+//
+////////////////////////////
+
+@import "templates/lifestyle-landing";
+@import "templates/market-listing";
+@import "templates/single-market";
+@import "templates/ebook-listing";
+@import "templates/single-ebook";
+@import "templates/persona"
+
+//
+// VENDOR -> HUBSPOT
+//
+////////////////////////////
+
+// @import "vendor/hubspot/hubspot";
